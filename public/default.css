@@ -4,6 +4,9 @@
     --color-primario:#10062A;
     --color-secundario: #F8253E;
     --gris: #484848;
-    
     font-family: 'Ubuntu', sans-serif; 
+}
+
+body{
+    background-color: #F5F8FF;
 }

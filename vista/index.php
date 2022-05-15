@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../public/default.css">
     <link rel="stylesheet" href="../public/normalize.css">
     <link rel="stylesheet" href="../public/index.css">
-    <script src="https://kit.fontawesome.com/3879fbe72a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.css">
 </head>
 <body>
     <div class="header">
@@ -50,11 +50,12 @@
     </div>
     <div class="slider"></div>
     
+    <div class="destacados">
 
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus nostrum rem error, praesentium, accusantium odit, maxime accusamus laudantium minus nobis voluptas amet tempore! Eveniet, atque nemo delectus tempore praesentium numquam?
-
-    </h1>
+    </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    <script src="https://kit.fontawesome.com/3879fbe72a.js" crossorigin="anonymous"></script>
 </body>
 </html>
