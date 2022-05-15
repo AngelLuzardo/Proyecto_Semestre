@@ -138,12 +138,6 @@ div{
     border-radius: 6px;
 }
 
-.slider{
-    margin: auto;
-    height: 400px;
-    width: 1400px;
-    margin: 40px auto ;
-}
 
 .body{
     margin: auto;
@@ -151,6 +145,33 @@ div{
     max-width: 1280px;
     display: flex;
 }
+
+.slider{
+    border: 1px solid red;
+    height: 400px;
+    width: 1400px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .ofertas{
     display: flex;
@@ -175,7 +196,7 @@ h2{
 }
 
 .producto__contenedor{
-    margin: auto;
+    margin-left: 10px;
     height: 460px;
     width: 260px;
     border-radius: 20px;
@@ -243,6 +264,10 @@ h2{
     font-weight: bold;
 }
 
+.slideshow__indicadores{
+    margin: auto;
+}
+
 .slideshow__anterior,
 .slideshow__siguiente{
     display: block;
@@ -261,9 +286,9 @@ h2{
 }
 
 .slideshow__siguiente{
-    right: -30px;
+    right: -10px;
 }
 
 .slideshow__anterior{
-    left: -30px;
+    left: -40px;
 }

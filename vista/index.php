@@ -49,9 +49,30 @@
         </div>
     </div>
     <div class="slider">
+
+        <div class="slider__contenedor">
+            <button class="slider__anterior">
+                <i class="fa-solid fa-angle-left"></i>
+            </button>
+
+            <div class="slider__items">
+                                        
+            </div>
+
+
+            <button class="slider__siguiente">
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
+
+        </div>
+
+        
+
+       
+
     </div>
 
-    
+
     <div class="body">
     <div class="ofertas">
         <h2 class="ofertas__titulo">Productos destacados y Ofertas</h2>
