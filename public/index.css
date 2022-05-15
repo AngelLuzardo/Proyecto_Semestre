@@ -1,5 +1,5 @@
 div{
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 
@@ -143,4 +143,127 @@ div{
     height: 400px;
     width: 1400px;
     margin: 40px auto ;
+}
+
+.body{
+    margin: auto;
+    min-width: auto;
+    max-width: 1280px;
+    display: flex;
+}
+
+.ofertas{
+    display: flex;
+    flex-direction: column;
+    width: 1300px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+h2{
+    align-self: center;
+    line-height: 32px;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--color-secundario);
+    margin-bottom: 20px;
+}
+
+.slideshow__lista{
+    height: 510px;   
+}
+
+.producto__contenedor{
+    margin: auto;
+    height: 460px;
+    width: 260px;
+    border-radius: 20px;
+    background-color: #fff;
+    transition: ease 300ms;
+    cursor: pointer;
+}
+
+.producto__contenedor:hover{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.producto__imagen{
+    display: flex;
+    height: 260px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.producto__imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+}
+
+.producto__contenedor span{
+    display: block;
+}
+
+.producto__desc-container{
+    padding: 0 10px;
+}
+
+.producto__precio-container{
+    padding: 0 10px;
+}
+
+.producto__marca{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.producto__titulo{
+    font-size: 18px;
+    font-weight: 200;
+    color: #484848;
+    overflow: hidden;
+}
+
+.producto__precio-transf{
+    font-size: 24px;
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+
+.producto__medio-pago{
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.producto__precio-otros{
+    font-size: 24px;
+    color: var(--color-primario);
+    font-weight: bold;
+}
+
+.slideshow__anterior,
+.slideshow__siguiente{
+    display: block;
+    border: none;
+    border-radius: 24px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primario);
+    color: #fff;
+    cursor: pointer;
+    line-height: 50px;
+    text-align: center;
+    top: calc(50% - 45px);
+    z-index: 1000;
+}
+
+.slideshow__siguiente{
+    right: -30px;
+}
+
+.slideshow__anterior{
+    left: -30px;
 }
