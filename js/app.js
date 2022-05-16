@@ -7,9 +7,18 @@ window.addEventListener("load", function(){
             arrows: {
               prev: '.slideshow__anterior',
               next: '.slideshow__siguiente'
-            }
+            }, 
     });
+})
 
-
-
+window.addEventListener("load", function(){
+  new Glider(document.querySelector(".slider__lista"),{
+      
+          slidesToShow: 1,
+          dots: '.slider__indicadores',
+          arrows: {
+            prev: '.slider__anterior',
+            next: '.slider__siguiente'
+          }, 
+  });
 })

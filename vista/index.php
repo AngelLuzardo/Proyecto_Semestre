@@ -55,10 +55,26 @@
                 <i class="fa-solid fa-angle-left"></i>
             </button>
 
-            <div class="slider__items">
-                                        
-            </div>
+            <div class="slider__lista">
 
+                <div class="slider__item">
+                    <img src="../img/slider1.png" alt="">                    
+                </div>
+                <div class="slider__item">
+                    <img src="../img/slider2.png" alt="">                    
+                </div>
+                <div class="slider__item">
+                    <img src="../img/slider3.png" alt="">                    
+                </div>
+                <div class="slider__item">
+                    <img src="../img/slider4.png" alt="">                    
+                </div>
+                <div class="slider__item">
+                    <img src="../img/slider5.png" alt="">                    
+                </div>
+
+
+            </div>
 
             <button class="slider__siguiente">
                 <i class="fa-solid fa-angle-right"></i>
@@ -66,7 +82,7 @@
 
         </div>
 
-        
+        <div class="slider__indicadores"></div>
 
        
 
