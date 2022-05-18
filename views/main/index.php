@@ -6,48 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.css">
-    <link rel="stylesheet" href="../public/default.css">
-    <link rel="stylesheet" href="../public/normalize.css">
-    <link rel="stylesheet" href="../public/index.css"> 
+    <link rel="stylesheet" href="public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/default.css">
+    <link rel="stylesheet" href="public/css/index.css"> 
 </head>
 <body>
-    <div class="header">
-        <div class="header__contenedor">
-            <div class="header__logo">
-                            
-            </div>
-            <div class="header__search">
-                <div class="search">
-                    <input type="text" name="barra_busqueda" class="search__input" placeholder="Buscar productos...">
-                    <button class="search__boton">
-                        <i class="search__icon fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
-                
-            </div>
-            <div class="header__usuario-carro">
-                <div class="header__usuario">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-                <p>Mi cuenta</p>
-                <div class="header__carro">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>   
-                <p>Mi carro</p>
-            </div>
-        </div>
-    </div>
-    <div class="nav">
-        <div class="nav__contenedor">
-            <ul>
-                <li><a href="#">Componentes</a></li>
-                <li><a href="#">Suministro Oficina</a></li>
-                <li><a href="#">Audio</a></li>
-                <li><a href="#">Conectividad y Redes</a></li>
-                <li><a href="#">Gaming</a></li>
-            </ul>
-        </div>
-    </div>
+    
+    <?php require "views/header.php"?>
+
+
     <div class="slider">
 
         <div class="slider__contenedor">
@@ -58,19 +25,19 @@
             <div class="slider__lista">
 
                 <div class="slider__item">
-                    <img src="../img/slider1.png" alt="">                    
+                    <img src="public/img/slider1.png" alt="">                    
                 </div>
                 <div class="slider__item">
-                    <img src="../img/slider2.png" alt="">                    
+                    <img src="public/img/slider2.png" alt="">                    
                 </div>
                 <div class="slider__item">
-                    <img src="../img/slider3.png" alt="">                    
+                    <img src="public/img/slider3.png" alt="">                    
                 </div>
                 <div class="slider__item">
-                    <img src="../img/slider4.png" alt="">                    
+                    <img src="public/img/slider4.png" alt="">                    
                 </div>
                 <div class="slider__item">
-                    <img src="../img/slider5.png" alt="">                    
+                    <img src="public/img/slider5.png" alt="">                    
                 </div>
 
 
@@ -102,7 +69,7 @@
                         <div class="producto">
                                 <div class="producto__contenedor">
                                     <div class="producto__imagen">
-                                        <img src="../public/pro1.png" alt="">
+                                        <img src="public/img/pro1.png" alt="">
                                     </div>
                                     <div class="producto__desc-container">
                                         <span class="producto__marca">Zotac</span>
@@ -120,7 +87,7 @@
                         <div class="producto">
                             <div class="producto__contenedor">
                                 <div class="producto__imagen">
-                                    <img src="../public/pro1.png" alt="">
+                                    <img src="public/img/pro1.png" alt="">
                                 </div>
                                 <div class="producto__desc-container">
                                     <span class="producto__marca">Zotac</span>
@@ -138,7 +105,7 @@
                         <div class="producto">
                             <div class="producto__contenedor">
                                 <div class="producto__imagen">
-                                    <img src="../public/pro1.png" alt="">
+                                    <img src="public/img/pro1.png" alt="">
                                 </div>
                                 <div class="producto__desc-container">
                                     <span class="producto__marca">Zotac</span>
@@ -156,7 +123,7 @@
                         <div class="producto">
                             <div class="producto__contenedor">
                                 <div class="producto__imagen">
-                                    <img src="../public/pro1.png" alt="">
+                                    <img src="public/img/pro1.png" alt="">
                                 </div>
                                 <div class="producto__desc-container">
                                     <span class="producto__marca">Zotac</span>
@@ -174,7 +141,7 @@
                         <div class="producto">
                             <div class="producto__contenedor">
                                 <div class="producto__imagen">
-                                    <img src="../public/pro1.png" alt="">
+                                    <img src="public/img/pro1.png" alt="">
                                 </div>
                                 <div class="producto__desc-container">
                                     <span class="producto__marca">Zotac</span>
@@ -192,7 +159,7 @@
                         <div class="producto">
                             <div class="producto__contenedor">
                                 <div class="producto__imagen">
-                                    <img src="../public/pro1.png" alt="">
+                                    <img src="public/img/pro1.png" alt="">
                                 </div>
                                 <div class="producto__desc-container">
                                     <span class="producto__marca">Zotac</span>
@@ -210,7 +177,7 @@
                         <div class="producto">
                             <div class="producto__contenedor">
                                 <div class="producto__imagen">
-                                    <img src="../public/pro1.png" alt="">
+                                    <img src="public/img/pro1.png" alt="">
                                 </div>
                                 <div class="producto__desc-container">
                                     <span class="producto__marca">Zotac</span>
@@ -228,7 +195,7 @@
                         <div class="producto">
                             <div class="producto__contenedor">
                                 <div class="producto__imagen">
-                                    <img src="../public/pro1.png" alt="">
+                                    <img src="public/img/pro1.png" alt="">
                                 </div>
                                 <div class="producto__desc-container">
                                     <span class="producto__marca">Zotac</span>
@@ -255,15 +222,13 @@
                 </div>
                 
             </div>
-
-
         </div>
     </div>
     
-
+    <?php require "views/footer.php"?>
 
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
     <script src="https://kit.fontawesome.com/3879fbe72a.js" crossorigin="anonymous"></script>
-    <script src="../js/app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

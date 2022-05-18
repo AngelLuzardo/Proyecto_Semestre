@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../public/default.css">
-    <link rel="stylesheet" href="../public/normalize.css">
-    <link rel="stylesheet" href="../public/index.css">
-    <script src="https://kit.fontawesome.com/3879fbe72a.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="header">
+<div class="header">
         <div class="header__contenedor">
             <div class="header__logo">
                             
@@ -36,8 +23,8 @@
                 <p>Mi carro</p>
             </div>
         </div>
-    </div>
-    <div class="nav">
+</div>
+<div class="nav">
         <div class="nav__contenedor">
             <ul>
                 <li><a href="#">Componentes</a></li>
@@ -47,14 +34,4 @@
                 <li><a href="#">Gaming</a></li>
             </ul>
         </div>
-    </div>
-    <div class="slider"></div>
-    
-
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus nostrum rem error, praesentium, accusantium odit, maxime accusamus laudantium minus nobis voluptas amet tempore! Eveniet, atque nemo delectus tempore praesentium numquam?
-
-    </h1>
-
-
-</body>
-</html>
+</div>
