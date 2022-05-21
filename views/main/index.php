@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.css">
-    <link rel="stylesheet" href="public/css/normalize.css">
-    <link rel="stylesheet" href="public/css/default.css">
-    <link rel="stylesheet" href="public/css/index.css"> 
+    <link rel="stylesheet" href="<?php echo constant("URL");?>public/css/normalize.css">
+    <link rel="stylesheet" href="<?php echo constant("URL");?>public/css/default.css">
+    <link rel="stylesheet" href="<?php echo constant("URL");?>public/css/index.css"> 
 </head>
 <body>
     
@@ -66,8 +66,8 @@
                     </button>
 
                     <div class="slideshow__lista">
-                        <div class="producto">
-                                <div class="producto__contenedor">
+                        <div class="producto" id="producto">
+                                <a href="<?php echo constant("URL");?>producto/mostrarProducto/1" class="producto__contenedor">
                                     <div class="producto__imagen">
                                         <img src="public/img/pro1.png" alt="">
                                     </div>
@@ -81,136 +81,207 @@
                                         <span class="producto__precio-otros">$210.000</span>
                                         <span class="producto__medio-pago">Otros medios de pago</span> 
                                     </div>
-                                </div>    
+                                </a>    
+                        </div>
+                        
+                        <div class="producto" id="producto">
+                                <a href="#" class="producto__contenedor">
+                                    <div class="producto__imagen">
+                                        <img src="public/img/pro1.png" alt="">
+                                    </div>
+                                    <div class="producto__desc-container">
+                                        <span class="producto__marca">Zotac</span>
+                                        <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
+                                    </div>
+                                    <div class="producto__precio-container">
+                                        <span class="producto__precio-transf">$200.000</span>
+                                        <span class="producto__medio-pago">Transferencia</span>
+                                        <span class="producto__precio-otros">$210.000</span>
+                                        <span class="producto__medio-pago">Otros medios de pago</span> 
+                                    </div>
+                                </a>    
                         </div>
 
-                        <div class="producto">
-                            <div class="producto__contenedor">
-                                <div class="producto__imagen">
-                                    <img src="public/img/pro1.png" alt="">
-                                </div>
-                                <div class="producto__desc-container">
-                                    <span class="producto__marca">Zotac</span>
-                                    <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
-                                </div>
-                                <div class="producto__precio-container">
-                                    <span class="producto__precio-transf">$200.000</span>
-                                    <span class="producto__medio-pago">Transferencia</span>
-                                    <span class="producto__precio-otros">$210.000</span>
-                                    <span class="producto__medio-pago">Otros medios de pago</span> 
-                                </div>
-                            </div>       
+                        <div class="producto" id="producto">
+                                <a href="#" class="producto__contenedor">
+                                    <div class="producto__imagen">
+                                        <img src="public/img/pro1.png" alt="">
+                                    </div>
+                                    <div class="producto__desc-container">
+                                        <span class="producto__marca">Zotac</span>
+                                        <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
+                                    </div>
+                                    <div class="producto__precio-container">
+                                        <span class="producto__precio-transf">$200.000</span>
+                                        <span class="producto__medio-pago">Transferencia</span>
+                                        <span class="producto__precio-otros">$210.000</span>
+                                        <span class="producto__medio-pago">Otros medios de pago</span> 
+                                    </div>
+                                </a>    
                         </div>
 
-                        <div class="producto">
-                            <div class="producto__contenedor">
-                                <div class="producto__imagen">
-                                    <img src="public/img/pro1.png" alt="">
-                                </div>
-                                <div class="producto__desc-container">
-                                    <span class="producto__marca">Zotac</span>
-                                    <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
-                                </div>
-                                <div class="producto__precio-container">
-                                    <span class="producto__precio-transf">$200.000</span>
-                                    <span class="producto__medio-pago">Transferencia</span>
-                                    <span class="producto__precio-otros">$210.000</span>
-                                    <span class="producto__medio-pago">Otros medios de pago</span> 
-                                </div>
-                            </div>       
+                        <div class="producto" id="producto">
+                                <a href="#" class="producto__contenedor">
+                                    <div class="producto__imagen">
+                                        <img src="public/img/pro1.png" alt="">
+                                    </div>
+                                    <div class="producto__desc-container">
+                                        <span class="producto__marca">Zotac</span>
+                                        <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
+                                    </div>
+                                    <div class="producto__precio-container">
+                                        <span class="producto__precio-transf">$200.000</span>
+                                        <span class="producto__medio-pago">Transferencia</span>
+                                        <span class="producto__precio-otros">$210.000</span>
+                                        <span class="producto__medio-pago">Otros medios de pago</span> 
+                                    </div>
+                                </a>    
                         </div>
 
-                        <div class="producto">
-                            <div class="producto__contenedor">
-                                <div class="producto__imagen">
-                                    <img src="public/img/pro1.png" alt="">
-                                </div>
-                                <div class="producto__desc-container">
-                                    <span class="producto__marca">Zotac</span>
-                                    <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
-                                </div>
-                                <div class="producto__precio-container">
-                                    <span class="producto__precio-transf">$200.000</span>
-                                    <span class="producto__medio-pago">Transferencia</span>
-                                    <span class="producto__precio-otros">$210.000</span>
-                                    <span class="producto__medio-pago">Otros medios de pago</span> 
-                                </div>
-                            </div>       
+                        <div class="producto" id="producto">
+                                <a href="#" class="producto__contenedor">
+                                    <div class="producto__imagen">
+                                        <img src="public/img/pro1.png" alt="">
+                                    </div>
+                                    <div class="producto__desc-container">
+                                        <span class="producto__marca">Zotac</span>
+                                        <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
+                                    </div>
+                                    <div class="producto__precio-container">
+                                        <span class="producto__precio-transf">$200.000</span>
+                                        <span class="producto__medio-pago">Transferencia</span>
+                                        <span class="producto__precio-otros">$210.000</span>
+                                        <span class="producto__medio-pago">Otros medios de pago</span> 
+                                    </div>
+                                </a>    
                         </div>
 
-                        <div class="producto">
-                            <div class="producto__contenedor">
-                                <div class="producto__imagen">
-                                    <img src="public/img/pro1.png" alt="">
-                                </div>
-                                <div class="producto__desc-container">
-                                    <span class="producto__marca">Zotac</span>
-                                    <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
-                                </div>
-                                <div class="producto__precio-container">
-                                    <span class="producto__precio-transf">$200.000</span>
-                                    <span class="producto__medio-pago">Transferencia</span>
-                                    <span class="producto__precio-otros">$210.000</span>
-                                    <span class="producto__medio-pago">Otros medios de pago</span> 
-                                </div>
-                            </div>       
+                        <div class="producto" id="producto">
+                                <a href="#" class="producto__contenedor">
+                                    <div class="producto__imagen">
+                                        <img src="public/img/pro1.png" alt="">
+                                    </div>
+                                    <div class="producto__desc-container">
+                                        <span class="producto__marca">Zotac</span>
+                                        <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
+                                    </div>
+                                    <div class="producto__precio-container">
+                                        <span class="producto__precio-transf">$200.000</span>
+                                        <span class="producto__medio-pago">Transferencia</span>
+                                        <span class="producto__precio-otros">$210.000</span>
+                                        <span class="producto__medio-pago">Otros medios de pago</span> 
+                                    </div>
+                                </a>    
                         </div>
 
-                        <div class="producto">
-                            <div class="producto__contenedor">
-                                <div class="producto__imagen">
-                                    <img src="public/img/pro1.png" alt="">
-                                </div>
-                                <div class="producto__desc-container">
-                                    <span class="producto__marca">Zotac</span>
-                                    <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
-                                </div>
-                                <div class="producto__precio-container">
-                                    <span class="producto__precio-transf">$200.000</span>
-                                    <span class="producto__medio-pago">Transferencia</span>
-                                    <span class="producto__precio-otros">$210.000</span>
-                                    <span class="producto__medio-pago">Otros medios de pago</span> 
-                                </div>
-                            </div>       
+                        <div class="producto" id="producto">
+                                <a href="#" class="producto__contenedor">
+                                    <div class="producto__imagen">
+                                        <img src="public/img/pro1.png" alt="">
+                                    </div>
+                                    <div class="producto__desc-container">
+                                        <span class="producto__marca">Zotac</span>
+                                        <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
+                                    </div>
+                                    <div class="producto__precio-container">
+                                        <span class="producto__precio-transf">$200.000</span>
+                                        <span class="producto__medio-pago">Transferencia</span>
+                                        <span class="producto__precio-otros">$210.000</span>
+                                        <span class="producto__medio-pago">Otros medios de pago</span> 
+                                    </div>
+                                </a>    
                         </div>
 
-                        <div class="producto">
-                            <div class="producto__contenedor">
-                                <div class="producto__imagen">
-                                    <img src="public/img/pro1.png" alt="">
-                                </div>
-                                <div class="producto__desc-container">
-                                    <span class="producto__marca">Zotac</span>
-                                    <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
-                                </div>
-                                <div class="producto__precio-container">
-                                    <span class="producto__precio-transf">$200.000</span>
-                                    <span class="producto__medio-pago">Transferencia</span>
-                                    <span class="producto__precio-otros">$210.000</span>
-                                    <span class="producto__medio-pago">Otros medios de pago</span> 
-                                </div>
-                            </div>       
+                        <div class="producto" id="producto">
+                                <a href="#" class="producto__contenedor">
+                                    <div class="producto__imagen">
+                                        <img src="public/img/pro1.png" alt="">
+                                    </div>
+                                    <div class="producto__desc-container">
+                                        <span class="producto__marca">Zotac</span>
+                                        <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
+                                    </div>
+                                    <div class="producto__precio-container">
+                                        <span class="producto__precio-transf">$200.000</span>
+                                        <span class="producto__medio-pago">Transferencia</span>
+                                        <span class="producto__precio-otros">$210.000</span>
+                                        <span class="producto__medio-pago">Otros medios de pago</span> 
+                                    </div>
+                                </a>    
                         </div>
 
-                        <div class="producto">
-                            <div class="producto__contenedor">
-                                <div class="producto__imagen">
-                                    <img src="public/img/pro1.png" alt="">
-                                </div>
-                                <div class="producto__desc-container">
-                                    <span class="producto__marca">Zotac</span>
-                                    <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
-                                </div>
-                                <div class="producto__precio-container">
-                                    <span class="producto__precio-transf">$200.000</span>
-                                    <span class="producto__medio-pago">Transferencia</span>
-                                    <span class="producto__precio-otros">$210.000</span>
-                                    <span class="producto__medio-pago">Otros medios de pago</span> 
-                                </div>
-                            </div>       
+                        <div class="producto" id="producto">
+                                <a href="#" class="producto__contenedor">
+                                    <div class="producto__imagen">
+                                        <img src="public/img/pro1.png" alt="">
+                                    </div>
+                                    <div class="producto__desc-container">
+                                        <span class="producto__marca">Zotac</span>
+                                        <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
+                                    </div>
+                                    <div class="producto__precio-container">
+                                        <span class="producto__precio-transf">$200.000</span>
+                                        <span class="producto__medio-pago">Transferencia</span>
+                                        <span class="producto__precio-otros">$210.000</span>
+                                        <span class="producto__medio-pago">Otros medios de pago</span> 
+                                    </div>
+                                </a>    
                         </div>
 
-                    
+                        <div class="producto" id="producto">
+                                <a href="#" class="producto__contenedor">
+                                    <div class="producto__imagen">
+                                        <img src="public/img/pro1.png" alt="">
+                                    </div>
+                                    <div class="producto__desc-container">
+                                        <span class="producto__marca">Zotac</span>
+                                        <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
+                                    </div>
+                                    <div class="producto__precio-container">
+                                        <span class="producto__precio-transf">$200.000</span>
+                                        <span class="producto__medio-pago">Transferencia</span>
+                                        <span class="producto__precio-otros">$210.000</span>
+                                        <span class="producto__medio-pago">Otros medios de pago</span> 
+                                    </div>
+                                </a>    
+                        </div>
+
+                        <div class="producto" id="producto">
+                                <a href="#" class="producto__contenedor">
+                                    <div class="producto__imagen">
+                                        <img src="public/img/pro1.png" alt="">
+                                    </div>
+                                    <div class="producto__desc-container">
+                                        <span class="producto__marca">Zotac</span>
+                                        <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
+                                    </div>
+                                    <div class="producto__precio-container">
+                                        <span class="producto__precio-transf">$200.000</span>
+                                        <span class="producto__medio-pago">Transferencia</span>
+                                        <span class="producto__precio-otros">$210.000</span>
+                                        <span class="producto__medio-pago">Otros medios de pago</span> 
+                                    </div>
+                                </a>    
+                        </div>
+
+                        <div class="producto" id="producto">
+                                <a href="#" class="producto__contenedor">
+                                    <div class="producto__imagen">
+                                        <img src="public/img/pro1.png" alt="">
+                                    </div>
+                                    <div class="producto__desc-container">
+                                        <span class="producto__marca">Zotac</span>
+                                        <span class="producto__titulo">Tarjeta de video Zotac GeForce GTX 1650 AMP, 4GB, GDDR6, 128-Bit, HDMI</span>
+                                    </div>
+                                    <div class="producto__precio-container">
+                                        <span class="producto__precio-transf">$200.000</span>
+                                        <span class="producto__medio-pago">Transferencia</span>
+                                        <span class="producto__precio-otros">$210.000</span>
+                                        <span class="producto__medio-pago">Otros medios de pago</span> 
+                                    </div>
+                                </a>    
+                        </div>
+                        
                     </div>
                     
 
@@ -229,6 +300,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
     <script src="https://kit.fontawesome.com/3879fbe72a.js" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
+    <script src="<?php echo constant("URL");?>js/app.js"></script>
 </body>
 </html>

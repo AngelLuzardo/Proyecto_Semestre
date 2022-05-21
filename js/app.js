@@ -21,4 +21,35 @@ window.addEventListener("load", function(){
             next: '.slider__siguiente'
           }, 
   });
+
+
+
 })
+
+
+// let productos_contenedores = document.querySelectorAll(".producto__contenedor");
+
+// productos_contenedores.forEach(element => {
+//   element.addEventListener("click",function(e){
+
+//   e.preventDefault();
+//   console.log(element);
+//   idProducto=element.getAttribute("idProducto");
+//   console.log(idProducto);
+  
+//   var datos ={
+//     "idProducto": idProducto
+//   } 
+
+
+//   fetch("views/producto/index.php",{
+//     method : "POST",
+//     data : datos
+
+//   })
+//     .then(window.location = "views/producto/index.php")
+
+//   })
+  
+// });
+

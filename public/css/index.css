@@ -89,7 +89,8 @@ h2{
     border-radius: 20px;
     background-color: #fff;
     transition: ease 300ms;
-    cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 .producto__contenedor:hover{

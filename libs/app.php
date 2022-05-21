@@ -20,15 +20,25 @@ class App{
 
         $dirrControlador = "controllers/". $url[0] .".php";
 
-
         if(file_exists($dirrControlador)){
             require_once $dirrControlador;
+
             $controlador = new $url[0];
+            $controlador->loadModel($url[0]);
 
-            if(isset($url[1])){
-                $controlador->{$url[1]}();
+            $parametros = sizeof($url);
+
+            if($parametros > 1){
+                if($parametros > 2){
+                    $param = [];
+                    for($i=2; $i < $parametros; $i++){
+                        array_push($param , $url[$i]);
+                    }
+                    $controlador->{$url[1]}($param);
+                }else{
+                    $controlador->{$url[1]}();
+                }
             }
-
         }else{
             $controlador = new ErrorRecurso();
         }
