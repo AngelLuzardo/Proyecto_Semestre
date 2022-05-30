@@ -1,6 +1,7 @@
 .detalle{
     background-color: #fff;
     border-radius: 12px;
+    margin-top: -50px;
 }
 
 .detalle__contenedor{
@@ -12,7 +13,6 @@
 .detalle__img{
     height: 565px;
     width: 755px;
-
 }
 
 .detalle__img img{
@@ -68,7 +68,7 @@
     color: green;
 }
 
-.separador{
+.detalle__separador{
     height: 0;
     width: 500px;
     border-top: 1px solid #aaa;
@@ -85,6 +85,12 @@
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
+    transition: ease 250ms;
+}
+
+.detalle__btn-agregar-carro:hover{
+    filter: saturate(90%);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.5);
 }
 
 .detalle__cantidad-productos{
@@ -110,4 +116,56 @@
 
 .detalle__cantidad{
     font-size: 22px;
+}
+
+[data-tab-content]{
+    display: none;
+}
+
+.active[data-tab-content]{
+    display: block;
+}
+
+.nav-tab__tab.active{
+    background-color: var(--color-primario);
+}
+
+.nav-tab ul {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style: none;
+    font-size: 26px;
+    line-height: 30px;
+    margin: 0;
+    padding-left: 10px;
+}
+
+
+.nav-tab__tab{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    font-weight: bold;
+    height: 50px;
+    width: 200px;
+    background-color: var(--morado);
+    margin-left: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    transition: ease 200ms;
+}
+
+.nav-tab__tab:hover{
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.5);
+}
+
+
+.tab-content{
+    text-align: justify;
+    font-size: 18px;
+    padding: 0 30px 10px 30px;
+    margin: 0;
 }

@@ -1,11 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap'); */
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Inter:wght@200&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
 
 :root{
     --color-primario:#10062A;
     --color-secundario: #F8253E;
     --morado: #2F027D;
     --gris: #484848;
-    font-family: 'Ubuntu', sans-serif; 
+    /* font-family: 'Ubuntu', sans-serif;  */
+    /* font-family: 'Inter', sans-serif; */
+    /* font-family: 'Heebo', sans-serif; */
+    /* font-family: 'IBM Plex Sans', sans-serif; */
+    font-family: 'Abel', sans-serif;
 }
 
 body{
