@@ -294,6 +294,28 @@
                 
             </div>
         </div>
+        <div class="marcas">
+            <h2 class="marcas__titulo">Marcas Destacadas</h2>
+            <div class="marcas__container">
+                <a href="#" class="marcas__img">
+                    <img src="public/img/asus-logo.png" alt="">
+                </a>
+                <a href="#" class="marcas__img">
+                    <img src="public/img/amd-logo.png" alt="">
+                </a>
+                <a href="#" class="marcas__img">
+                    <img src="public/img/evga-logo.png" alt="">
+                </a>
+                <a href="#" class="marcas__img">
+                    <img src="public/img/hp-logo.png" alt="">
+                </a>
+                <a href="#" class="marcas__img">
+                    <img src="public/img/samsung-logo.png" alt="">
+                </a>
+            </div>
+                
+        </div>
+
     </div>
     
     <?php require "views/footer.php"?>

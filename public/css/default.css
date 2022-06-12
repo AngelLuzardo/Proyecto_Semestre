@@ -131,8 +131,6 @@ img{
 
 .header__usuario-carro p{
     color: #fff;
-    font-family: 'Ubuntu', sans-serif; 
-
 }
 
 .nav{
@@ -178,11 +176,13 @@ img{
 
 
 .body{
-    margin: 80px auto;
+    margin: 30px auto;
     min-width: auto;
     max-width: 1300px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+
 }
 
 .footer{
@@ -210,7 +210,7 @@ img{
 .footer__item  span {
     text-decoration:none;
     color: var(--color-secundario);
-    transition: ease 500ms;
+    transition: ease 300ms;
     border-radius: 6px;
     font-size: 20px;
     font-weight: bold;
@@ -240,7 +240,6 @@ img{
 
 .footer__item > ul > li > a:hover{
     text-decoration: underline;
-    color: var(--color-secundario);
 }
 
 .footer__item:nth-child(1){
@@ -248,11 +247,11 @@ img{
 }
 
 .footer__item:nth-child(2){
-    text-align: center;
+    text-align: left;
 }
 
 .footer__item:nth-child(3){
-    text-align: right;
+    text-align: left;
 }
 
 .footer__rrss{
@@ -285,5 +284,4 @@ img{
 
 .footer__rrss > a:nth-child(4):hover{
     color: #FF0000;
-
 }

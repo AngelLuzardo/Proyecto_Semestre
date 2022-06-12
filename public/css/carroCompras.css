@@ -1,0 +1,129 @@
+.carro{
+    display: grid;
+    grid-template-columns: 70% 28%;
+    height: 700px;
+    width: 1300px;
+    justify-content: space-between;
+}
+
+.carro__productos{
+    background-color: #fff;
+    border-radius: 12px;
+    position: relative;
+}
+
+.carro__detalle{
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.carro__total-compra{
+    border-top: 1px solid var(--morado);
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0;
+    width: 100%;
+    justify-content: end;
+}
+
+.descripcion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--morado);
+}
+
+.descripcion__imagen{
+    width: 210px;
+}
+
+.descripcion__nombre{
+    width: 320px;
+}
+
+.descripcion__contenedor-precio{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    width: 340px;
+    justify-items: center;
+}
+
+.detalle{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    width: 340px;
+    justify-items: center;
+    font-size: 26px;
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+.producto__cantidad-productos{
+    align-items: center;
+    text-align: center;
+    margin: 5px 0;
+    border: 3px solid var(--color-primario);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 120px;
+    height: 30px;
+}
+
+.restar-producto,.agregar-producto{
+    cursor: pointer;
+}
+
+.producto__cantidad{
+    font-size: 20px;
+}
+
+.producto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border-bottom: 1px solid var(--morado) */
+}
+
+.producto__imagen{
+    height: 160px;
+    width: 210px;
+}
+
+.producto__imagen img{
+    height: 100%;
+    object-fit: contain;
+    padding: 0;
+    width: 100%;
+}
+
+.producto__nombre-producto{
+    width: 320px;
+}
+
+.producto__contenedor-precio{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    width: 340px;
+}
+
+.producto__precio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    height: 160px;
+}
+
+h3{
+    margin: 0;
+}
+
+.total{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}

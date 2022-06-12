@@ -17,10 +17,12 @@
                     <i class="fa-solid fa-user"></i>
                 </div>
                 <p>Mi cuenta</p>
-                <div class="header__carro">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>   
-                <p>Mi carro</p>
+                <a href="<?php echo constant("URL");?>carroCompras/render">
+                    <div class="header__carro">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>   
+                    <p>Mi carro</p>
+                </a>
             </div>
         </div>
 </div>
