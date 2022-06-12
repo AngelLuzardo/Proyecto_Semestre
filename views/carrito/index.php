@@ -95,6 +95,126 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="producto">
+                    <div class="producto__imagen">
+                    <img src="//media.spdigital.cl/__sized__/products/tq9p3b1b_36ef43cb-thumbnail-1080x1080-70.jpg" 
+                    class="" fetchpriority="high" importance="high" loading="lazy" width="100" height="75" draggable="false">
+                    </div>
+                    <div class="producto__nombre-producto">
+                        <h3 class="producto__titulo">Memoria Ram DDR4 8GB 2666MHz Kingston FURY Beast Black DIMM, Non-ECC, CL16, 1.2V</h3>
+                        <div class="producto__marca">
+                            <span>KINGSTON</span>
+                        </div>
+                        <div class="producto__cantidad-productos">
+                            <div class="restar-producto detalle__cantidad">
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                            <span class="producto__cantidad">1</span>
+                            <div class="agregar-producto detalle__cantidad">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="producto__contenedor-precio">
+                        <div class="producto__precio">
+                            <span>$32.980</span>
+                        </div>
+                        <div class="producto__precio">
+                            <span>$34.140</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <div class="producto__imagen">
+                    <img src="//media.spdigital.cl/__sized__/products/tq9p3b1b_36ef43cb-thumbnail-1080x1080-70.jpg" 
+                    class="" fetchpriority="high" importance="high" loading="lazy" width="100" height="75" draggable="false">
+                    </div>
+                    <div class="producto__nombre-producto">
+                        <h3 class="producto__titulo">Memoria Ram DDR4 8GB 2666MHz Kingston FURY Beast Black DIMM, Non-ECC, CL16, 1.2V</h3>
+                        <div class="producto__marca">
+                            <span>KINGSTON</span>
+                        </div>
+                        <div class="producto__cantidad-productos">
+                            <div class="restar-producto detalle__cantidad">
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                            <span class="producto__cantidad">1</span>
+                            <div class="agregar-producto detalle__cantidad">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="producto__contenedor-precio">
+                        <div class="producto__precio">
+                            <span>$32.980</span>
+                        </div>
+                        <div class="producto__precio">
+                            <span>$34.140</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <div class="producto__imagen">
+                    <img src="//media.spdigital.cl/__sized__/products/tq9p3b1b_36ef43cb-thumbnail-1080x1080-70.jpg" 
+                    class="" fetchpriority="high" importance="high" loading="lazy" width="100" height="75" draggable="false">
+                    </div>
+                    <div class="producto__nombre-producto">
+                        <h3 class="producto__titulo">Memoria Ram DDR4 8GB 2666MHz Kingston FURY Beast Black DIMM, Non-ECC, CL16, 1.2V</h3>
+                        <div class="producto__marca">
+                            <span>KINGSTON</span>
+                        </div>
+                        <div class="producto__cantidad-productos">
+                            <div class="restar-producto detalle__cantidad">
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                            <span class="producto__cantidad">1</span>
+                            <div class="agregar-producto detalle__cantidad">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="producto__contenedor-precio">
+                        <div class="producto__precio">
+                            <span>$32.980</span>
+                        </div>
+                        <div class="producto__precio">
+                            <span>$34.140</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <div class="producto__imagen">
+                    <img src="//media.spdigital.cl/__sized__/products/tq9p3b1b_36ef43cb-thumbnail-1080x1080-70.jpg" 
+                    class="" fetchpriority="high" importance="high" loading="lazy" width="100" height="75" draggable="false">
+                    </div>
+                    <div class="producto__nombre-producto">
+                        <h3 class="producto__titulo">Memoria Ram DDR4 8GB 2666MHz Kingston FURY Beast Black DIMM, Non-ECC, CL16, 1.2V</h3>
+                        <div class="producto__marca">
+                            <span>KINGSTON</span>
+                        </div>
+                        <div class="producto__cantidad-productos">
+                            <div class="restar-producto detalle__cantidad">
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                            <span class="producto__cantidad">1</span>
+                            <div class="agregar-producto detalle__cantidad">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="producto__contenedor-precio">
+                        <div class="producto__precio">
+                            <span>$32.980</span>
+                        </div>
+                        <div class="producto__precio">
+                            <span>$34.140</span>
+                        </div>
+                    </div>
+                </div>
                 
 
                 <div class="carro__total-compra">
@@ -112,6 +232,27 @@
         </div>
 
         <div class="carro__detalle">
+            <div class="carro__metodos-pago">
+                <div class="carro__logo-metodos">
+                    <img src="<?php echo constant("URL");?>public/img/webpay-logo.png" alt="">
+                </div>
+                <div class="carro__logo-metodos">
+                    <img src="<?php echo constant("URL");?>public/img/mercado-pago-logo.png" alt="">
+                </div>
+            </div>
+            <div class="carro__envio">
+                <h2>Metodos de entrega</h2>
+                <ul>
+                    <li>Despacho a domicilio</li>
+                    <li>Retiro en agencias de Chilexpress, Starken o Bluexpress</li>
+                    <li>Retiro en tienda</li>
+                </ul>
+            </div>
+            <div class="detalle__boton-pago">
+                <a href="#">
+                    <button class="btn-pago">Continuar compra</button>
+                </a>
+            </div>
         </div>
 
     </div>

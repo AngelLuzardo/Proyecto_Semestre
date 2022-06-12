@@ -1,7 +1,7 @@
 .carro{
     display: grid;
     grid-template-columns: 70% 28%;
-    height: 700px;
+    min-height: 570px;
     width: 1300px;
     justify-content: space-between;
 }
@@ -12,9 +12,15 @@
     position: relative;
 }
 
+.carro__container{
+    margin-bottom: 50px;
+}
+
 .carro__detalle{
+    position: relative;
     background-color: #fff;
     border-radius: 12px;
+    height: 570px;
 }
 
 .carro__total-compra{
@@ -59,13 +65,14 @@
     font-size: 26px;
     margin-right: 30px;
     font-weight: bold;
+    color: var(--morado);
 }
 
 .producto__cantidad-productos{
     align-items: center;
     text-align: center;
     margin: 5px 0;
-    border: 3px solid var(--color-primario);
+    border: 3px solid var(--morado);
     border-radius: 10px;
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -75,6 +82,7 @@
 
 .restar-producto,.agregar-producto{
     cursor: pointer;
+    color: var(--morado);
 }
 
 .producto__cantidad{
@@ -126,4 +134,53 @@ h3{
     display: flex;
     align-items: center;
     font-size: 20px;
+}
+
+.carro__logo-metodos{
+    margin: auto;
+    height: 150px;
+    width: 300px;
+}
+
+.carro__logo-metodos img{
+    height: 100%;
+    object-fit: contain;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carro__envio{
+    width: 310px;
+    margin-left: 30px;
+}
+
+.carro__envio h2{
+    color: var(--morado);
+}
+
+.detalle__boton-pago{
+    display: flex;
+    width: 365px;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+}
+
+
+.btn-pago{
+    height: 40px;
+    width: 330px;
+    color: #fff;
+    background-color: var(--morado);
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 300ms ease;
+}
+
+.btn-pago:hover{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
