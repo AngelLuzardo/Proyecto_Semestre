@@ -13,6 +13,13 @@ class carroCompras extends Controller{
         $this->view->render("carrito/index");
     }
 
+    public function agregarProducto(){
+        $id_usuario = 1;
+        $idProducto = $_POST["idProducto"];
+        $cantidad = 1; //$_POST["cantidadProductos"]
+        $this->model->agregarProducto($id_usuario,$idProducto,$cantidad);
+        //header("Location : producto/mostrarProducto/$idProducto");
+    }
 
     public function mostrarCarroCompras(){
         // $idProducto = $param[0];

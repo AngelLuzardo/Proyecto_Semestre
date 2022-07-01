@@ -1,7 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap'); */
-/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Inter:wght@200&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
@@ -11,15 +7,11 @@
     --color-secundario: #F8253E;
     --morado: #2F027D;
     --gris: #484848;
-    /* font-family: 'Ubuntu', sans-serif;  */
-    /* font-family: 'Inter', sans-serif; */
-    /* font-family: 'Heebo', sans-serif; */
-    /* font-family: 'IBM Plex Sans', sans-serif; */
     font-family: 'Abel', sans-serif;
 }
 
 body{
-    background-color: #F5F8FF;
+    background-color: #F8F9FD;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -68,9 +60,9 @@ img{
 
 .search{
     display: flex;
-    border: 3px solid var(--color-secundario);
+    border: 2px solid var(--color-secundario);
     background-color: #fff;
-    height: 40px;
+    height: 45px;
     width: 100%;
     border-radius: 10px;
     align-items: center;
@@ -85,6 +77,8 @@ img{
     margin: 0 8px 0 14px;
     outline: 0;
 }
+
+
 
 .search__boton{
     background-color: #fff;
@@ -107,7 +101,7 @@ img{
 
 
 .search__input:focus{
-    border-bottom: 1px solid red;
+    
 }
 
 .header__usuario-carro{
@@ -196,7 +190,7 @@ img{
 }
 
 .footer__contenedor{
-    width: 1280px;
+    width: 1240px;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     gap: 5px;
@@ -239,6 +233,7 @@ img{
 }
 
 .footer__item > ul > li > a:hover{
+    color: #fff;
     text-decoration: underline;
 }
 
@@ -284,4 +279,93 @@ img{
 
 .footer__rrss > a:nth-child(4):hover{
     color: #FF0000;
+}
+
+.header_btnMicuenta{
+    width: 45px;
+    height: 35px;
+    background-color: #ff344b;
+    border: none;
+    border-radius: 50px;
+    margin-left: 20px;
+}
+.header_btnMicuenta:hover{
+    background-color: #f7697a;
+    cursor: pointer;
+}
+.header_btnMicuenta .iconUsuario{
+    color: rgb(234, 234, 234);
+    font-size: x-large;
+}
+/*.btnMicuenta p{
+    float: right;
+    font-size: 13px;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif; 
+}*/
+.header_btnSesion{
+    width: 270px;
+    background-color: #2F027D;
+    font-family: 'Ubuntu', sans-serif; 
+    color: #F5F8FF;
+    margin-left: 14px;
+}
+.header_btnSesion:hover{
+    background-color: #4200b5; 
+    color: #F5F8FF;
+}
+.header_btn-registrar{
+    width: 270px;
+    margin: auto;
+    margin-left: 14px;
+}
+.header_btn-registrar:active{
+    background-color: #4200b5;
+    color: #F5F8FF;
+}
+.header_menuLogin{
+    width: 300px;
+    margin-right: 25px;
+}
+
+.header_menuLogin label{
+    margin-left: 20px;
+}
+.form_CorreoElec{
+    width: 270px;
+    margin: auto;
+}
+.form_Contraseña{
+    width: 270px;
+    margin: auto;
+}
+
+#modalRegistrarse .modal-title{
+    color: #2F027D;
+    font-size: 35px;
+    margin: auto;
+    text-align: center;
+}
+#modalRegistrarse label{
+    color: #2F027D;
+    font-size: 20px;
+}
+#modalRegistrarse .btnRegistrar{
+    width: 85%;
+    color: #fff;
+    font-size: 20px;
+    margin: auto;
+    background-color: var(--morado);
+}
+#modalRegistrarse .btnRegistrar:hover{
+    color: #fff;
+    background-color: #4c00ce;
+}
+#modalRegistrarse .btnRegistrar:active{
+    border-color: #4c00ce;
+}
+
+.btn__carro{
+    display: flex;
+    align-items: center;
 }

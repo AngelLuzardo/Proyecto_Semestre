@@ -15,34 +15,39 @@
 
 <div class="body">
 
-    <!-- <?php var_dump($this->producto);?> -->
+    <?php 
+    $producto = new ProductoModelo; 
+    $producto = $this->producto;
+    ?>
     <div class="detalle">
         <div class="detalle__contenedor">
             <div class="detalle__img">
-                <img src="https://pcnitro.cl/19051-large_default/gv-r69xtaorus-m-16gd-tarjeta-de-video-aorus-amd-radeon-rx-6900-xt-master-16gb-4k-pcle-40-rgb.jpg" class="" 
+                <img src="<?php echo $producto->foto_ref ?>" class="" 
                 fetchpriority="high" importance="high" loading="lazy" draggable="false">
             </div>
             <div class="detalle__datos">
                 <div class="detalle__nombre-producto">
-                    <h1 class="detalle__titulo">Monitor Gamer Viewsonic XG2402 24" 144 Hz, 1ms, 2 x HDMI 1.4 , DisplayPort 1.2</h1>
+                    <h1 class="detalle__titulo"><?php echo $producto->nombre ?></h1>
                 </div>
                 <div class="detalle__marca">
-                    <span>VIEWSONIC</span>
+                    <span><?php echo $producto->marca ?></span>
                 </div>
                 <div class="detalle__precio">
                     <span class="precio-transf">Pago con transferencia</span>
-                    <span class="precio transferencia">$189.990</span>
+                    <span class="precio transferencia">$<?php echo number_format($producto->precio,0) ?></span>
                 </div>
                 <div class="detalle__precio">
                     <span class="precio-otros">Otros medios de pago</span>
-                    <span class="precio otros-medios">$196.640</span>
+                    <span class="precio otros-medios">$<?php echo number_format($producto->precio*1.05,0)?></span>
                 </div>
                 <div class="detalle__stock">
-                    <span>Stock: 16 unidades.</span>
+                    <span>Stock: <?php echo $producto->cantidad ?> unidades.</span>
                 </div>
                 <div class="detalle__separador"></div>
                 <div class="detalle__agregar-carro">
-                    <button class="detalle__btn-agregar-carro">Agregar al carrito</button>
+                    <form action="<?php echo constant("URL");?>carroCompras/agregarProducto" method="post">
+                        <button class="detalle__btn-agregar-carro" name="idProducto" value="<?php echo $producto->idproducto ?>">Agregar al carrito</button>
+                    </form>
                 </div>
                 <div class="detalle__cantidad-productos">
                     <div class="restar-producto detalle__cantidad">
@@ -70,30 +75,9 @@
             </ul>
             <div class="tab-content">
                 <div class="tab-content__descripcion active" data-tab-content>
-                    <h2>Descripción</h2>
-                    <p>
-                        El XG2402 de ViewSonic® es un monitor de 24" Full HD con toda la velocidad y las características que 
-                        necesitan los entusiastas del juego más intransigentes. Con una increíble velocidad de actualización nativa de 
-                        144Hz, así como tecnología AMD FreeSync™, las capacidades de velocidad de actualización variables de este monitor 
-                        prácticamente eliminan los cortes e interrupciones en la pantalla y ofrecen un juego fluido durante las escenas de 
-                        acción de ritmo rápido. Un tiempo de respuesta ultra rápido de 1 ms y un bajo retardo de entrada ofrecen un rendimiento
-                        de pantalla sin interrupciones, incluso en las secuencias con uso intensivo de gráficos. Para obtener una ventaja 
-                        competitiva para ganar el juego, la función Game Mode optimiza la visualización para FPS, RTS y MOBA. Además de eso,
-                        la función de estabilización de negros nivel 22 lo ayuda a encontrar a los enemigos que acechan en la oscuridad, mientras
-                        que el monitor mantiene los colores y el contraste brillantemente enriquecidos. Con un soporte ergonómico inspirado en los
-                        jugadores que cuenta con una funcionalidad integrada de gancho para auriculares y administración de cables, la XG2402 tiene
-                        todo lo que necesita para que conquiste sus juegos y misiones de entretenimiento.
-                    </p>
-                    <h2>144Hz Refresh Rate</h2>
-                    <p>
-                        Con una velocidad de actualización de 144Hz, este monitor proporciona una gran fluidez visual y
-                        gráficos impresionantes, independientemente de la rapidez con la que se desarrolla la acción en el juego.
-                        Dígale adiós a los molestos marcadores y a la borrosidad que genera el movimiento, y dele la bienvenida a 
-                        un excelente juego con los elementos visuales más regulares posibles.
-
-                        *La imagen de este documento es para demostración de una imagen bajo diferentes resoluciones (o esquemas) 
-                        solo como demostración y puede no ser la imagen de visualización real del producto.
-                    </p>
+                    <div class="descripcion__container">
+                        <?php echo $producto->descripcion ?>
+                    </div> 
                 </div>
                 <div class="tab-content__garantia" data-tab-content>
                     <div class="tab-content__duracion">

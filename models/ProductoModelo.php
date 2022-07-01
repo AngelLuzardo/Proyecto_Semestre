@@ -10,7 +10,8 @@
         public $precio; 
         public $foto_ref; 
         public $cantidad; 
-
+        public $categoria;
+        public $marca;
 
         public function __construct(){
             parent::__construct();
@@ -29,7 +30,9 @@
             $con->connect();
             
 
-            $sql = "SELECT * FROM PRODUCTO WHERE idproducto='$id'"; 
+            $sql = "SELECT idproducto,producto.nombre as nombre,descripcion,precio,foto_referencial,cantidad, categoria.nombre as categoria,
+             marca.nombre as marca FROM producto INNER JOIN categoria ON producto.categoria_id = categoria.idcategoria INNER JOIN marca ON 
+             producto.marca = marca.idmarca WHERE producto.idproducto =$id"; 
             $resultado=$con->conn->query($sql);
 
             if($resultado->num_rows > 0){
@@ -37,13 +40,14 @@
                 
                     $producto->idproducto = $col["idproducto"];
                     $producto->nombre = $col["nombre"];
-                    $producto->tipo = $col["tipo"];
+                    $producto->tipo = "";
                     $producto->descripcion = $col["descripcion"];
-                    $producto->caracteristicas = $col["caracteristicas"];
+                    $producto->caracteristicas = "";
                     $producto->precio = $col["precio"];
                     $producto->foto_ref = $col["foto_referencial"];
                     $producto->cantidad = $col["cantidad"];
-              
+                    $producto->categoria = $col["categoria"];
+                    $producto->marca = $col["marca"];
                 }
             }
             $con->disconnect();

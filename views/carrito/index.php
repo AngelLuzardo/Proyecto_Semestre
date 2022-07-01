@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="<?php echo constant("URL");?>public/css/normalize.css">
-    <link rel="stylesheet" href="<?php echo constant("URL");?>public/css/default.css">
     <link rel="stylesheet" href="<?php echo constant("URL");?>public/css/carroCompras.css">
+    <title>Document</title>
 </head>
 <body>
      
@@ -15,6 +13,7 @@
 
 <div class="body">
 
+    
     <div class="carro">
         <div class="carro__productos">
             <div class="carro__container">

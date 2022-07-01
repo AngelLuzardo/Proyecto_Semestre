@@ -1,6 +1,7 @@
 .detalle{
     background-color: #fff;
     border-radius: 12px;
+    width: 1280px;
 }
 
 .detalle__contenedor{
@@ -11,7 +12,8 @@
 
 .detalle__img{
     height: 565px;
-    width: 755px;
+    width: 745px;
+    padding: 10px;
 }
 
 .detalle__img img{
@@ -22,13 +24,13 @@
 }
 
 .detalle__datos{
-    padding: 0 10px;
+    padding: 0 0 0 10px;
 }
 
 .detalle__titulo{
     font-size: 30px;
     font-weight: 400;
-    width: 500px;
+    width: 510px;
 }
 
 .detalle__marca{
@@ -40,7 +42,7 @@
 .detalle__precio{
     display: flex;
     justify-content: space-between;
-    padding-right: 25px;
+    padding-right: 40px;
     margin: 10px 0;
     font-size: 20px;
 }
@@ -167,4 +169,10 @@
     font-size: 18px;
     padding: 0 30px 10px 30px;
     margin: 0;
+}
+
+.descripcion__container{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
