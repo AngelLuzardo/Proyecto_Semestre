@@ -57,6 +57,11 @@
     justify-items: center;
 }
 
+.descripcion__mensaje{
+    font-size: 20px;
+    margin: 20px;
+}
+
 .detalle{
     display: grid;
     grid-template-columns: 2fr 2fr;

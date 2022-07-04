@@ -65,10 +65,10 @@
                 <!-- <p>Mi cuenta</p> -->
                 <div class="header__carro">
                     <a class="btn__carro" href="<?php echo constant("URL");?>carroCompras/render" >
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <p>Mi carro</p>
-                    </a>   
-                    
+                        <button type="button" class="btn header_btnMicuenta ">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>      
+                    </a>      
                 </div>
             </div>
         </div>
