@@ -36,13 +36,13 @@ img{
 }
 
 .header__contenedor{
-    display: flex;
-    width: 1300px;
-    justify-content: space-between;
+    display: grid;
+    width: 1200px;
+    grid-template-columns: 1fr 3fr 1fr;
 }
 
 .header__logo{
-    width: 200px;
+    width: 230px;
     
 }
 
@@ -52,7 +52,7 @@ img{
 }
 
 .header__search{
-    width: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,15 +106,15 @@ img{
 
 .header__usuario-carro{
     display: flex;
-    width: 230px;
+    width: 180px;
     align-items: center;
     justify-content: start;
     
 }
 
 .header__carro ,.header__usuario{
-    width: fit-content;
-    height: fit-content;
+    width: 70px;
+    height: 45px;
     color: #fff;
     font-size: 26px;
     border: none;
@@ -195,6 +195,7 @@ img{
     grid-template-columns: 33% 33% 33%;
     gap: 5px;
     text-align: left;
+    justify-items: center;
 }
 
 .footer__item{

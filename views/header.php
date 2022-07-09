@@ -31,7 +31,6 @@
             </div>
             <div class="header__usuario-carro">
                 <div class="header__usuario">
-                    <!-- <i class="fa-solid fa-user"></i> -->
                     <form id="login" method="post" action="">
                             <button type="button" class="btn header_btnMicuenta " data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa-regular fa-circle-user iconUsuario"></i>
@@ -62,7 +61,6 @@
                             </ul> 
                         </form>
                 </div>
-                <!-- <p>Mi cuenta</p> -->
                 <div class="header__carro">
                     <a class="btn__carro" href="<?php echo constant("URL");?>carroCompras/render" >
                         <button type="button" class="btn header_btnMicuenta ">
@@ -140,9 +138,7 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    <?php include_once "libs/scriptsJS.php"?>
 
     <script>
         $(document).ready(function(){
@@ -150,6 +146,5 @@
                 $("#modalRegistrarse").modal("show");
             });
             
-        });
-        
+        });  
     </script>

@@ -13,8 +13,8 @@
     <h1><?php echo $this->mensaje; ?></h1>
     <?php require "views/footer.php"?>
 
-
-    <script src="https://kit.fontawesome.com/3879fbe72a.js" crossorigin="anonymous"></script>
+    <?php include_once "libs/scriptsJS.php"?>
+    
 </body>
 
 </html>

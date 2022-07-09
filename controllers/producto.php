@@ -25,6 +25,12 @@ class Producto extends Controller{
         $this->view->producto = $producto;
         $this->view->render("producto/index");
     }
+
+    public function listaProductos($param = null){
+        $listaProductos = $this->model->listarProductos();
+        $this->view->productos = $listaProductos;
+        $this->view->render("producto/lista");
+    }
 }
 
 

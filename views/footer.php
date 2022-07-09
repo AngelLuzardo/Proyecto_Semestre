@@ -23,7 +23,7 @@
             <span class="footer__item">
                 <span>Acceso Directo</span>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="<?php echo constant('URL');?>">Inicio</a></li>
                     <li><a href="#">Registrarse</a></li>
                     <li><a href="#">Nuestros productos</a></li>
                     <li><a href="#">Iniciar sesion</a></li>

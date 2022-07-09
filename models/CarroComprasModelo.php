@@ -8,6 +8,7 @@
         public $precio_producto;
         public $total;
         public $foto_referencial;
+        public $stock;
         public $marca;
 
         public function __construct(){
@@ -17,15 +18,17 @@
         public function agregarProducto($id_usuario,$id_producto,$cantidad){
             $con=new Database();
             $con->connect();
-
+            session_start();
 
             $query = "INSERT INTO carrito (id_usuario,id_producto,cantidad) VALUES($id_usuario,$id_producto,$cantidad)";
 
             
                 if ($con->conn->query($query) === TRUE) {
-                    echo "Producto Agregado Correctamente";
+                    $_SESSION["mensaje"] = "Tu producto ha sido agregado al carrito";
+                    $_SESSION["codigo"] = "success";
                 } else {
-                    echo "Producto NO agregado";
+                    $_SESSION['mensaje'] = "Tu producto no pudo ser agregado";
+                    $_SESSION['codigo'] = "error";
                 }
 
             $con->disconnect();
@@ -37,17 +40,21 @@
 
             $con=new Database();
             $con->connect();
-
             $itemsCarrito = [];
 
-            $query = "SELECT carrito.id_producto, SUM(carrito.cantidad) as cantidad,
-            producto.nombre,producto.precio, producto.precio*SUM(carrito.cantidad) as total, producto.foto_referencial, 
-            marca.nombre as marca FROM carrito INNER JOIN producto on id_producto = producto.idproducto 
-            INNER JOIN marca on producto.marca = marca.idmarca WHERE id_usuario = 2  GROUP BY carrito.id_producto"; 
+            $query = "SELECT carrito.id_producto, SUM(carrito.cantidad) AS cantidad,
+            producto.nombre,producto.precio, producto.precio*SUM(carrito.cantidad) AS total, producto.foto_referencial,
+            producto.cantidad AS stock, marca.nombre AS marca FROM carrito INNER JOIN producto
+            ON id_producto = producto.idproducto INNER JOIN marca ON producto.marca = marca.idmarca
+            WHERE id_usuario = 1  GROUP BY carrito.id_producto"; 
 
             $resultado=$con->conn->query($query);
+            
             try{
+                
                 if($resultado->num_rows > 0){
+
+                   
                     while($col = $resultado->fetch_assoc()){
                     
                         $item = new CarroComprasModelo();
@@ -58,6 +65,7 @@
                         $item->precio_producto = $col["precio"];
                         $item->total = $col["total"];
                         $item->foto_referencial = $col["foto_referencial"];
+                        $item->stock = $col["stock"];
                         $item->marca = $col["marca"];
     
     
@@ -65,7 +73,8 @@
                         array_push($itemsCarrito, $item);
                     }
                 }else{
-                    $itemsCarrito = []; 
+                    $itemsCarrito = [];
+                  
                 }
             }catch(Exception){
                 return [];
@@ -73,6 +82,7 @@
             
             $con->disconnect();
             return $itemsCarrito;
+            
         }
-
+        
     }

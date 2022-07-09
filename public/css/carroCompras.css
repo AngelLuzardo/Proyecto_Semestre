@@ -10,6 +10,7 @@
     background-color: #fff;
     border-radius: 12px;
     position: relative;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
 }
 
 .carro__container{
@@ -21,6 +22,7 @@
     background-color: #fff;
     border-radius: 12px;
     height: 570px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
 }
 
 .carro__total-compra{
@@ -82,13 +84,27 @@
     display: grid;
     grid-template-columns: 33% 33% 33%;
     width: 120px;
-    height: 30px;
+    height: 40px;
 }
 
 .restar-producto,.agregar-producto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     color: var(--morado);
+    height: 35px;
+    width: 40px;
 }
+
+.restar-producto > i {
+    width: 40px;
+}
+
+.agregar-producto > i {
+    width: 40px;
+}
+
 
 .producto__cantidad{
     font-size: 20px;

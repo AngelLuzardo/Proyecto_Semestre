@@ -1,0 +1,13 @@
+.detalle{
+    background-color: inherit;
+    border-radius: 12px;
+    width: 1280px;
+    
+}
+
+.detalle__contenedor{
+    display: grid;
+    grid-template-columns: repeat(4, 260px);
+    gap: 20px;
+    justify-content: center;
+}

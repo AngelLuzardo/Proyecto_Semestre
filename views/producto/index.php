@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="<?php echo constant("URL");?>public/css/normalize.css">
     <link rel="stylesheet" href="<?php echo constant("URL");?>public/css/default.css">
     <link rel="stylesheet" href="<?php echo constant("URL");?>public/css/producto.css">
+    
 </head>
 <body>
      
@@ -47,16 +48,18 @@
                 <div class="detalle__agregar-carro">
                     <form action="<?php echo constant("URL");?>carroCompras/agregarProducto" method="post">
                         <button class="detalle__btn-agregar-carro" name="idProducto" value="<?php echo $producto->idproducto ?>">Agregar al carrito</button>
+                        <input id="cantidadProductos" type="hidden" name="cantidadProductos" value="1">
                     </form>
                 </div>
                 <div class="detalle__cantidad-productos">
-                    <div class="restar-producto detalle__cantidad">
+                    <div id="restar" class="restar-producto">
                         <i class="fa-solid fa-minus"></i>
                     </div>
-                    <span class="detalle__cantidad">1</span>
-                    <div class="agregar-producto detalle__cantidad">
+                    <div id="cantidad" class="producto__cantidad">1</div>
+                    <div id="sumar" class="agregar-producto sumar">
                         <i class="fa-solid fa-plus"></i>
                     </div>
+                    <div hidden id="stock"><?php echo $producto->cantidad?></div>
                 </div>
                 <div class="detalle__envio">
                     <h2>Metodos de entrega</h2>
@@ -116,11 +119,10 @@
 
 
 
-
-
+<script src="<?php echo constant("URL");?>js/producto.js"></script>
+<?php include "libs/scriptsJS.php"?>
 
 <?php require "views/footer.php"?>
-<script src="https://kit.fontawesome.com/3879fbe72a.js" crossorigin="anonymous"></script>
-<script src="<?php echo constant("URL");?>js/producto.js"></script>
+
 </body>
 </html>

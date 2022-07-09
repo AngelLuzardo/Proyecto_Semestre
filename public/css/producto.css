@@ -2,6 +2,7 @@
     background-color: #fff;
     border-radius: 12px;
     width: 1280px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
 }
 
 .detalle__contenedor{

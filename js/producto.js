@@ -1,5 +1,5 @@
-const tabs = document.querySelectorAll("[data-tab-target]")
-const tabContent = document.querySelectorAll("[data-tab-content]")
+var tabs = document.querySelectorAll("[data-tab-target]");
+var tabContent = document.querySelectorAll("[data-tab-content]");
 
 tabs.forEach(tab =>{
     tab.addEventListener("click", () =>{
@@ -16,3 +16,57 @@ tabs.forEach(tab =>{
     })
 
 })
+
+
+
+
+var restarBoton = document.getElementsByClassName("restar-producto");
+var sumarBoton = document.getElementsByClassName("agregar-producto");
+
+
+for(var i = 0; i < sumarBoton.length; i++){
+    var boton = sumarBoton[i];
+    boton.addEventListener('click',function(event){
+
+      var botonClicked = event.target;
+
+      var stock = parseInt(botonClicked.parentElement.parentElement.children[3].innerText);
+      
+      var input = botonClicked.parentElement.parentElement.children[1];
+      var cantidad = input.innerText;
+      if(cantidad < stock){
+        var nuevaCantidad = parseInt(cantidad) + 1;
+
+        input.innerText = nuevaCantidad;
+
+        if(document.getElementById("cantidadProductos")!= null){
+          document.getElementById("cantidadProductos").setAttribute('value',nuevaCantidad);
+        }
+      }
+      
+    })
+}
+
+for(var i = 0; i < restarBoton.length; i++){
+  var boton = restarBoton[i];
+  boton.addEventListener('click',function(event){
+
+
+    var botonClicked = event.target;
+ 
+    var input = botonClicked.parentElement.parentElement.children[1];
+    var cantidad = input.innerText;
+
+    if(cantidad > 1){
+      var nuevaCantidad = parseInt(cantidad) - 1;
+      input.innerText = nuevaCantidad;
+
+      if(document.getElementById("cantidadProductos")!= null){
+        document.getElementById("cantidadProductos").setAttribute('value',nuevaCantidad);
+      }
+    }
+  })
+}
+
+
+

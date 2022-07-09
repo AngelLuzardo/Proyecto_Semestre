@@ -317,11 +317,12 @@
         </div>
 
     </div>
+
+    <?php include_once "libs/scriptsJS.php"?>
     
     <?php require "views/footer.php"?>
 
-    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
-    <script src="https://kit.fontawesome.com/3879fbe72a.js" crossorigin="anonymous"></script>
+    
     <script src="<?php echo constant("URL");?>js/app.js"></script>
 </body>
 </html>

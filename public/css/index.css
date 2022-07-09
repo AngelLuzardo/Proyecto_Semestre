@@ -77,7 +77,7 @@ h2{
 }
 
 .slideshow__lista{
-    height: 500px;
+    height: 450px;
 }
 
 .producto{
@@ -88,17 +88,17 @@ h2{
 
 .producto__contenedor{
     margin: auto;
-    height: 490px;
+    height: 440px;
     width: 260px;
-    border-radius: 20px;
+    border-radius: 12px;
     background-color: #fff;
     transition: ease 300ms;
-    text-decoration: none !important;
+    text-decoration: none;
     color: black;
 }
 
 .producto__contenedor:hover{
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
     text-decoration: none !important;
 }
 
@@ -138,6 +138,7 @@ h2{
     font-weight: 200;
     color: #484848;
     overflow: hidden;
+    height: 60px;
 }
 
 .producto__precio-transf{

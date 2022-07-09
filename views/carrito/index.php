@@ -58,15 +58,17 @@
                         <h3 class="producto__titulo"><?php echo $item->nombre_producto?></h3>
                         <div class="producto__marca">
                             <span><?php echo $item->marca?></span>
+                            
                         </div>
                         <div class="producto__cantidad-productos">
-                            <div class="restar-producto detalle__cantidad">
+                            <div class="restar-producto">
                                 <i class="fa-solid fa-minus"></i>
                             </div>
-                            <span class="producto__cantidad"><?php echo $item->cantidad?></span>
-                            <div class="agregar-producto detalle__cantidad">
+                            <div id="cantidad" class="producto__cantidad"><?php echo $item->cantidad?></div>
+                            <div class="agregar-producto">
                                 <i class="fa-solid fa-plus"></i>
                             </div>
+                            <div hidden id="stock"><?php echo $item->stock?></div>
                         </div>
                     </div>
                         <div class="producto__contenedor-precio">
@@ -129,9 +131,12 @@
 </div>
 
 
-
-<?php require "views/footer.php"?>
-<script src="https://kit.fontawesome.com/3879fbe72a.js" crossorigin="anonymous"></script>
 <script src="<?php echo constant("URL");?>js/producto.js"></script>
+<?php include_once "libs/scriptsJS.php"?>
+<?php require "views/footer.php"?>
+
+
+
+
 </body>
 </html>
