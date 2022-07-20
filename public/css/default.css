@@ -29,7 +29,6 @@ img{
     display: flex;
     background-color: var(--color-primario);
     height: 100px;
-    margin: auto;
     justify-content: center;
     width: 100%;
     
@@ -127,6 +126,71 @@ img{
     color: #fff;
 }
 
+.cs, .miPerfil{
+    font-size: 1.3em;
+    font-weight: 600;
+    display: none;
+}
+.cs{
+    width: 270px;
+    height: 50px;
+    padding: 1px;
+    margin: auto 4em;
+
+}
+.cerrarsession{
+    width: 270px;
+    height: 50px;
+    color: var(--color-primario);
+    font-family: inherit;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+}
+.cerrarsession:hover{
+    background-color: #d9dee9;
+    color: #2F027D;
+}
+.btnMicuenta{
+    width: 45px;
+    height: 35px;
+    background-color: #ff344b;
+    border: none;
+    border-radius: 50px;
+    margin-left: 20px;
+}
+.btnMicuenta:hover{
+    background-color: #f7697a;
+    cursor: pointer;
+}
+.btnMicuenta .iconUsuario{
+    color: rgb(234, 234, 234);
+    font-size: x-large;
+}
+.sesionMicuenta{
+    width: 150px;
+    height: 45px;
+    background-color: #ff344b;
+    border: none;
+    border-radius: 50px;
+    display: none;
+}
+.sesionMicuenta:hover{
+    background-color: #f7697a;
+    cursor: pointer;
+}
+.btnSesion{
+    width: 270px;
+    background-color: #2F027D;
+    font-family: 'Ubuntu', sans-serif; 
+    color: #F5F8FF;
+    margin-left: 14px;
+}
+.btnSesion:hover{
+    background-color: #4200b5; 
+    color: #F5F8FF;
+}
+
 .nav{
     display: flex;
     background-color: var(--morado);
@@ -168,6 +232,110 @@ img{
     color: var(--color-primario);
 }
 
+.nav_categorias{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    float: left;
+    display: none;
+    background-color: #fff;
+    border-radius:0 0 .8em .8em;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.nav_opciones > a{
+    display: grid;
+    margin: 1em 1.5em 1.5em 2em;
+    text-decoration: none;
+    color: #260087;
+    font-family: inherit;
+    font-size: 1.0em;
+    font-weight: 600;
+}
+.nav_opciones > a:hover{
+    color:#5514c6;
+}
+
+.nav_cont_cat{
+    position: fixed;
+    width: 15%;
+    height: 100%;
+    background-color: lightgrey;
+    display: none;
+    z-index: 1003;
+}
+.nav_cat{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: none;
+    z-index: 1004;
+}
+.nav_cat_titulo{
+    font-size: 1.5em;
+    font-family: inherit;
+    font-weight: 600;
+    margin: auto 0 auto .8em;
+    color: #5514c6;
+}
+.btn_cat{
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/menu.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.btn_cat_cerrar{
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/cerrar.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: none;
+}
+tr > th{
+    font-size: 1.25em;
+    font-weight: 500;
+    color: #5514c6;
+    margin-left: 1em;
+
+}
+.btn_categoria{
+    width: 100%;
+    height: 100%;
+    color: #2F027D;
+    font-size: 1em;
+    font-weight: 600;
+}
+.btn_categoria:hover{
+    background-color: #eaeffb;
+}
+
+#c1{
+    margin-inline-start:25px ;
+    margin-top: 60px;
+    z-index: 1001;
+}
+#c2{
+    margin-inline-start:245px ;
+    margin-top: 60px;
+    z-index: 1001;
+}
+#c3{
+    margin-inline-start:465px ;
+    margin-top: 60px;
+    z-index: 1001;
+}
+#c4{
+    margin-inline-start:675px ;
+    margin-top: 60px;;
+    z-index: 1001;
+}
+#c5{
+    margin-inline-start:890px ;
+    margin-top: 60px;
+    z-index: 1001;
+}
 
 .body{
     margin: 30px auto;
@@ -387,3 +555,6 @@ img{
 .btn__carro button i{
     font-size: 20px;
 }
+
+
+

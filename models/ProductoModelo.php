@@ -97,6 +97,49 @@
 
         }
 
+
+        public function productoMarcas($marca){
+            $con=new Database();
+            $con->connect();
+            $listaProductos = [];
+
+            $query = "SELECT idproducto,producto.nombre as nombre,descripcion,precio,foto_referencial,cantidad, categoria.nombre as categoria,
+            marca.nombre as marca FROM producto INNER JOIN categoria ON producto.categoria_id = categoria.idcategoria INNER JOIN marca ON 
+            producto.marca = marca.idmarca WHERE marca.nombre = '$marca' ORDER BY producto.precio"; 
+
+            $resultado=$con->conn->query($query);
+            
+            try{
+                
+                if($resultado->num_rows > 0){
+
+                   
+                    while($col = $resultado->fetch_assoc()){
+                    
+                        $item = new ProductoModelo();
+    
+                        $item->id_producto = $col["idproducto"];
+                        $item->nombre = $col["nombre"];
+                        $item->precio = $col["precio"];
+                        $item->foto_ref = $col["foto_referencial"];
+                        $item->marca = $col["marca"];
+
+                        array_push($listaProductos, $item);
+                    }
+                }else{
+                    $listaProductos = [];
+                  
+                }
+            }catch(Exception){
+                return [];
+            }
+            
+            $con->disconnect();
+            return $listaProductos;
+        }
+
+        
+
     }
 
 

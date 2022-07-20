@@ -90,6 +90,14 @@
     transition: ease 250ms;
 }
 
+.--nostock{
+    opacity: 0.3;
+}
+
+.--red{
+    color: red;
+}
+
 .detalle__btn-agregar-carro:hover{
     filter: saturate(90%);
     box-shadow: 0 4px 8px rgb(0 0 0 / 0.5);

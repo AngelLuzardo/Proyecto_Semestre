@@ -41,13 +41,25 @@
                     <span class="precio-otros">Otros medios de pago</span>
                     <span class="precio otros-medios">$<?php echo number_format($producto->precio*1.05,0)?></span>
                 </div>
-                <div class="detalle__stock">
-                    <span>Stock: <?php echo $producto->cantidad ?> unidades.</span>
+                <?php if($producto->cantidad < 1){ ?>
+                <div class="detalle__stock --red">
+                    <span>Stock: 
+                        <?php echo "Sin Stock";?>
+                    </span>
                 </div>
+                <?php }else{?>
+                    <div class="detalle__stock">
+                    <span>Stock: <?php echo $producto->cantidad;?> unidades.</span>
+                </div>
+                <?php }?>
                 <div class="detalle__separador"></div>
                 <div class="detalle__agregar-carro">
                     <form action="<?php echo constant("URL");?>carroCompras/agregarProducto" method="post">
-                        <button class="detalle__btn-agregar-carro" name="idProducto" value="<?php echo $producto->idproducto ?>">Agregar al carrito</button>
+                        <?php if($producto->cantidad < 1){ ?>
+                            <button class="detalle__btn-agregar-carro --nostock" name="idProducto" value="<?php echo $producto->idproducto?>" disabled>Agregar al carrito</button>
+                        <?php }else{?>
+                            <button class="detalle__btn-agregar-carro" name="idProducto" value="<?php echo $producto->idproducto?>" >Agregar al carrito</button>
+                        <?php }?>
                         <input id="cantidadProductos" type="hidden" name="cantidadProductos" value="1">
                     </form>
                 </div>

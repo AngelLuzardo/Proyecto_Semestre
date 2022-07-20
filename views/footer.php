@@ -25,7 +25,7 @@
                 <ul>
                     <li><a href="<?php echo constant('URL');?>">Inicio</a></li>
                     <li><a href="#">Registrarse</a></li>
-                    <li><a href="#">Nuestros productos</a></li>
+                    <li><a href="<?php echo constant('URL');?>/producto/listaproductos/">Nuestros productos</a></li>
                     <li><a href="#">Iniciar sesion</a></li>
                 </ul>
             </span>

@@ -18,7 +18,6 @@ class Producto extends Controller{
         $idProducto = $param[0];
         $producto = $this->model->getById($idProducto);
 
-        session_start();
         $_SESSION["id_producto"] = $producto->idproducto;
 
 
@@ -26,8 +25,22 @@ class Producto extends Controller{
         $this->view->render("producto/index");
     }
 
-    public function listaProductos($param = null){
+    public function listaProductos(){
         $listaProductos = $this->model->listarProductos();
+        $this->view->productos = $listaProductos;
+        $this->view->render("producto/lista");
+    }
+
+    public function listaProductosDestacados(){
+        $listaProductos = $this->model->listarProductos();
+        return $listaProductos;
+    }
+
+    public function marcas($param = null){
+        
+        $marca = $param[0];
+
+        $listaProductos = $this->model->productoMarcas($marca);
         $this->view->productos = $listaProductos;
         $this->view->render("producto/lista");
     }
