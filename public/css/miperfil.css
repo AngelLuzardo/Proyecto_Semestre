@@ -137,7 +137,6 @@
     background-color: var(--morado);
     color:rgb(241, 241, 241);
     font-size: 1.2em;
-    margin: 1em auto;
 }
 #btnGuardarDatos:hover{
     background-color: rgb(118, 19, 255);
