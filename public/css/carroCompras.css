@@ -299,6 +299,10 @@ h3{
     font-size: 20px;
     border: 1px solid var(--morado);
 }
+.boleta__items-container{
+    min-height: 400px;
+}
+
 
 .boleta__items{
     display: grid;
@@ -334,4 +338,8 @@ h3{
 
 .btn-volver:visited{
     color: #fff;
+}
+
+.boleta_nombre-producto{
+    width: 640px;
 }

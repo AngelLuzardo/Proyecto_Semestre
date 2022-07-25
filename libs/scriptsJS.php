@@ -45,19 +45,7 @@ if (isset($_SESSION['correo'])) {
     $calle = $_SESSION['calle'];
     $numero = $_SESSION['numero'];
     $rut = $_SESSION['rut'];
-    echo "<script>
-            $(document).ready(function(){    
-            $('.btnMicuenta').css('display','none');
-            $('.nav_input').css('display','none');
-            $('.inisesion').css('display','none');
-
-            $('.sesionMicuenta').css('display','inline');
-            $('.cs').css('display','inline');
-            $('.btnPerfil').css('display','inline');
-            $('.miPerfil').css('display','inline');
-
-        });
-        </script>";
+    
 } else {
     $mail = "";
     $clave = "";

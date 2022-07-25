@@ -63,7 +63,7 @@
                         <span>PRECIO UNITARIO</span>
                         <span>TOTAL</span>
                     </div>
-
+                    <div class="boleta__items-container">
                     <?php 
                         $arrItems = count($items_boleta);
                         for ($i = 0;$i < $arrItems; $i++){
@@ -73,16 +73,17 @@
 
                     <div class="boleta__items">
                         <span><?php echo $items_boleta[$i]["producto_id"]?></span>
-                        <span><?php echo $items_boleta[$i]["nombre_producto"]?>
+                        <span class="boleta_nombre-producto"><?php echo $items_boleta[$i]["nombre_producto"]?>
                         </span>
                         <span><?php echo $items_boleta[$i]["cantidad"]?></span>
                         <span>$<?php echo $precio?></span>
                         <span>$<?php echo $total?></span>
                     </div>
-
+                    
                     <?php 
                         $total_compra += $items_boleta[$i]["total"];
                     } ?>
+                    </div>
                     <div class="boleta__productos">
                         <span></span>
                         <span></span>

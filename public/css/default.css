@@ -31,7 +31,7 @@ img{
     height: 100px;
     justify-content: center;
     width: 100%;
-    
+    align-content: center;
 }
 
 .header__contenedor{
@@ -42,12 +42,13 @@ img{
 
 .header__logo{
     width: 230px;
-    
+    height: 100px;
 }
 
 .header__logo img{
     height: 100%;
     width: 100%;
+    object-fit: contain;
 }
 
 .header__search{
@@ -120,6 +121,21 @@ img{
     border-left: 1px solid #fff;
     margin-left: 10px;
     padding-left: 10px;
+}
+
+.nav_input{
+    width: 270px;
+    margin: 0 10px;
+}
+
+.nav_cont_boton{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -20px;
+}
+
+.form-label {
+    margin-left: 10px;
 }
 
 .header__usuario-carro p{
@@ -556,5 +572,11 @@ tr > th{
     font-size: 20px;
 }
 
+.hidden{
+    display: none;
+}
 
+.show{
+    display: block;
+}
 

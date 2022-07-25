@@ -137,7 +137,7 @@
         public function nuevaBoleta($rut_cliente,$precio_total){
             $con=new Database();
             $con->connect();
-
+            $id = 0;
             $query = "INSERT INTO boleta (numero_boleta, precio_neto, costo_iva, precio_total, fecha_compra, cliente_persona_rut) 
             VALUES (null,233,23,432,'2022/10/08','111222')"; 
 

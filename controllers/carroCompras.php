@@ -37,6 +37,8 @@ class carroCompras extends Controller{
             $idProducto = $_POST["idProducto"];
             $cantidad   = $_POST["cantidadProductos"];
             $this->model->agregarProducto($rut,$idProducto,$cantidad);
+            $_SESSION["mensaje"] = "Tu producto ha sido agregado al carrito";
+            $_SESSION["codigo"] = "success";
         }
 
         $url = constant("URL")."producto/mostrarProducto/$idProducto";
@@ -51,8 +53,9 @@ class carroCompras extends Controller{
             $_SESSION['mensaje'] = "Debe iniciar sesion";
             $_SESSION['codigo'] = "error";
         }else{
-            $rut = $_POST["rut"];
-            $idProducto = $_POST["idProducto"];
+            $rut = $_SESSION["rut"];
+            $idProducto = $param[0];
+            echo $rut.$idProducto;
             $this->model->eliminarProducto($rut,$idProducto);
         }
 
@@ -91,14 +94,17 @@ class carroCompras extends Controller{
             $id_compra = $this->model->nuevaBoleta($rut,$precio_total);
 
             $this->model->generarBoleta($id_compra,$listaProductos);
-            $this->boleta($id_compra);
+    
             $this->model->vaciarCarro($rut);
+            $url = constant("URL")."carroCompras/boleta/$id_compra";
+            header('Location: '.$url);
+            die();
         }
 
     }
 
-    public function boleta($numero_boleta){
-        $sql_boleta = $this->model->obtenerBoleta($numero_boleta);
+    public function boleta($param){
+        $sql_boleta = $this->model->obtenerBoleta($param[0]);
         $this->view->boleta = $sql_boleta;
         $this->view->render("carrito/boleta");
     }

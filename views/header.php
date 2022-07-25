@@ -1,3 +1,14 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+if (isset($_SESSION['correo'])) {
+    $cuenta = true;
+} else {
+    $cuenta = false;
+}
+
+?>
 <?php include_once "libs/scriptsJS.php" ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +31,9 @@
     <div class="header">
         <div class="header__contenedor">
             <div class="header__logo">
-
+                <a href="<?php echo constant("URL");?>">
+                    <img src="<?php echo constant("URL"); ?>public/img/logo.png" alt="" srcset="">
+                </a>
             </div>
             <div class="header__search">
                 <div class="search">
@@ -34,14 +47,14 @@
             <div class="header__usuario-carro">
                 <div class="header__usuario">
                     <form id="login" method="post" action="<?php echo constant("URL");?>usuario/validar">
-                    <button type="button" class="btn header_btnMicuenta" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-regular fa-circle-user iconUsuario"></i>
-                        </button>
-                        <button type="button" class="btn sesionMicuenta " data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="header_nombre"><?php echo $nombres." ".$apellidop." ".$apellidom;?></span>
-                        </button>
+                        <a class="btn__carro" href="<?php echo constant("URL");?>usuario/render" id="btn_link-perfil">
+                            <button type="button" class="btn header_btnMicuenta" id="btnMicuenta" data-bs-toggle="dropdown">
+                                <i class="fa-regular fa-circle-user iconUsuario"></i>
+                            </button>
+                        </a>
+
                         <ul class="dropdown-menu menuLogin">
-                            <label for="iniciarsession" class="form-label inisesion">Iniciar Sesión</label>
+                            <label for="iniciarsession" class="form-label inisesion" id="inisesion" hidden>Iniciar Sesión</label>
                             <label for="miperfil" class="form-label miPerfil">Mi Perfil</label>
                             <li>
                                 <div class="mb-6 nav_input">
@@ -51,7 +64,7 @@
                             <br/>
                             <li>
                                 <div class="mb-6 nav_input">
-                                    <input type="password" class="form-control Contraseña" id="Contraseña" name="txtClave" placeholder="Contraseña">
+                                    <input type="password" class="form-control Contraseña" id="Contrasena" name="txtClave" placeholder="Contraseña">
                                 </div>
                             </li>
                             <br/>
@@ -91,9 +104,9 @@
                     <a href="#" id="nav_link" class="c1">Componentes</a>
                     <div class="nav_categorias c1" id="c1">
                         <div class="nav_opciones">
-                            <a href="" class="nav_componentes">Procesadores</a>
-                            <a href="" class="nav_componentes">Discos Duros</a>
-                            <a href="" class="nav_componentes">Placas Madres</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/procesadores" class="nav_componentes">Procesadores</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/discos-duros" class="nav_componentes">Discos Duros</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/placas-madres" class="nav_componentes">Placas Madres</a>
                         </div>
                     </div>
                 </li>
@@ -101,9 +114,9 @@
                     <a href="#" id="nav_link" class="c2">Suministro Oficina</a>
                     <div class="nav_categorias c2" id="c2">
                         <div class="nav_opciones">
-                            <a href="" class="nav_suministros">Tintas</a>
-                            <a href="" class="nav_suministros">Papel impresora</a>
-                            <a href="" class="nav_suministros">Escritorios</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/tinta" class="nav_suministros">Tintas</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/papel-impresora" class="nav_suministros">Papel impresora</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/escritorios" class="nav_suministros">Escritorios</a>
                         </div>
                     </div>
                 </li>
@@ -111,9 +124,9 @@
                     <a href="#" id="nav_link" class="c3">Audio</a>
                     <div class="nav_categorias c3" id="c3">
                         <div class="nav_opciones">
-                            <a href="" class="nav_audio">Audifonos</a>
-                            <a href="" class="nav_audio">Parlantes</a>
-                            <a href="" class="nav_audio">Instrumentos<br /><br /> musicales</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/audifonos" class="nav_audio">Audifonos</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/parlantes" class="nav_audio">Parlantes</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/instrumentos" class="nav_audio">Instrumentos<br /><br /> musicales</a>
                         </div>
                     </div>
                 </li>
@@ -121,9 +134,9 @@
                     <a href="#" id="nav_link" class="c4">Conectividad y Redes</a>
                     <div class="nav_categorias c4" id="c4">
                         <div class="nav_opciones">
-                            <a href="" class="nav_redes">Switch</a>
-                            <a href="" class="nav_redes">Router</a>
-                            <a href="" class="nav_redes">Cableado</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/switch" class="nav_redes">Switch</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/router" class="nav_redes">Router</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/cableado" class="nav_redes">Cableado</a>
                         </div>
                     </div>
                 </li>
@@ -131,9 +144,9 @@
                     <a href="#" id="nav_link" class="c5">Gaming</a>
                     <div class="nav_categorias c5" id="c5">
                         <div class="nav_opciones">
-                            <a href="" class="nav_game">Tarjetas de Video</a>
-                            <a href="" class="nav_game">Juegos</a>
-                            <a href="" class="nav_game">Consolas</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/tarjetas-de-video" class="nav_game">Tarjetas de Video</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/juegos" class="nav_game">Juegos</a>
+                            <a href="<?php echo constant("URL");?>producto/categoria/consolas" class="nav_game">Consolas</a>
                         </div>
                     </div>
                 </li>
@@ -195,6 +208,24 @@
         </div>
     </form>
    
+    <?php 
+    if(!$cuenta){
+        echo '<script>
+            var btn_perfil = document.getElementById("btnMicuenta");
+            var a = document.getElementById("btn_link-perfil"); 
 
+            a.remove();
+            var form = document.getElementById("login"); 
+            form.prepend(btn_perfil);
+        </script>';
+    }else{
+        echo '<script>
+            var btn_perfil = document.getElementById("btnMicuenta");
+            
+            btn_perfil.removeAttribute("data-bs-toggle");
+        </script>';
+    }
+
+    ?>
     <script src="<?php echo constant("URL"); ?>js/header.js"></script>
-    
+

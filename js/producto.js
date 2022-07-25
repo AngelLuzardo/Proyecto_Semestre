@@ -115,3 +115,26 @@ boton.addEventListener('click',function(event){
   }
 })
 }
+
+
+// document.getElementsByName('inisesion').style.display='none';
+
+// var btn_inicio = document.getElementById("btnSesion");
+// btn_inicio.classList.add("hidden");
+
+// var inp_correo = document.getElementById("CorreoElec");
+// var inp_pass = document.getElementById("Contrasena");
+// var btn_registro = document.getElementById("btn-registrar");
+// var label_ini = document.getElementById("inisesion");
+
+// inp_correo.classList.add("hidden");
+// inp_pass.classList.add("hidden");
+// btn_registro.classList.add("hidden");
+// label_ini.hidden();
+
+var btn_perfil = document.getElementById("btnMicuenta");
+btn_perfil.removeAttribute("data-bs-toggle");
+
+
+
+

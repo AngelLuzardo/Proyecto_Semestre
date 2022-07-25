@@ -44,6 +44,14 @@ class Producto extends Controller{
         $this->view->productos = $listaProductos;
         $this->view->render("producto/lista");
     }
+    public function categoria($param = null){
+        
+        $categoria = $param[0];
+
+        $listaProductos = $this->model->productoCategoria($categoria);
+        $this->view->productos = $listaProductos;
+        $this->view->render("producto/lista");
+    }
 }
 
 
