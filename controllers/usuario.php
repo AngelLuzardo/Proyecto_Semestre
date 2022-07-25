@@ -95,6 +95,7 @@ class Usuario extends Controller{
 
     function cerrarSesion(){
         unset($_SESSION['correo']);
+        unset($_SESSION['rut']);
         session_destroy();
 
         $url = constant("URL");

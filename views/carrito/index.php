@@ -93,13 +93,13 @@
 
                         $itemLista["idProducto"] = $item->id_producto;
                         $itemLista["cantidad"] = $item->cantidad;
-                        array_push($listaProductos,$itemLista);
-                       
+                        array_push($listaProductos, $itemLista);
+
                         $total += $item->total;
                         $otrosMedios += $item->total;
-                    } 
-                        $_SESSION["total_compra"] = $total;
-                        $_SESSION["listaProductos"] = $listaProductos;
+                    }
+                    $_SESSION["total_compra"] = $total;
+                    $_SESSION["listaProductos"] = $listaProductos;
                     ?>
 
 
@@ -137,7 +137,7 @@
                     </ul>
                 </div>
                 <div class="detalle__boton-pago">
-                    <a href="<?php echo constant("URL");?>carroCompras/procesarCompra">
+                    <a href="<?php echo constant("URL"); ?>carroCompras/procesarCompra">
                         <button class="btn-pago">Continuar compra</button>
                     </a>
                 </div>
@@ -147,14 +147,8 @@
 
     </div>
 
-
     <script src="<?php echo constant("URL"); ?>js/producto.js"></script>
     <?php include_once "libs/scriptsJS.php" ?>
     <?php require "views/footer.php" ?>
-
-
-
-
 </body>
-
 </html>

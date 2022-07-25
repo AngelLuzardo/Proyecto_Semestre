@@ -10,6 +10,9 @@
 
 
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
 if (isset($_SESSION["mensaje"]) && $_SESSION["mensaje"] != "") {
 
 ?>
@@ -23,15 +26,15 @@ if (isset($_SESSION["mensaje"]) && $_SESSION["mensaje"] != "") {
         })
     </script>
 <?php
-    unset($_SESSION["mensaje"]);
-} ?>
+    
+} 
+unset($_SESSION["mensaje"]);
+?>
 
 
 
 <?php
-if (!isset($_SESSION)) {
-    session_start();
-}
+
 if (isset($_SESSION['correo'])) {
     $mail = $_SESSION['correo'];
     $clave = $_SESSION['clave'];

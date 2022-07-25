@@ -1,5 +1,5 @@
 
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <?php
 
 if(!isset($_SESSION)) 
@@ -29,16 +29,15 @@ class carroCompras extends Controller{
     }
 
     public function agregarProducto(){
-        if(!isset($_SESSION["rut"])){
-            $_SESSION['mensaje'] = "Debe iniciar sesion";
-            $_SESSION['codigo'] = "error";
-        }else{
+        
+        $idProducto = $_POST["idProducto"];
+        if(isset($_SESSION["rut"])){
             $rut = $_SESSION["rut"];
-            $idProducto = $_POST["idProducto"];
             $cantidad   = $_POST["cantidadProductos"];
             $this->model->agregarProducto($rut,$idProducto,$cantidad);
-            $_SESSION["mensaje"] = "Tu producto ha sido agregado al carrito";
-            $_SESSION["codigo"] = "success";
+        }else{
+            $_SESSION['mensaje'] = "Debe iniciar sesion";
+            $_SESSION['codigo'] = "error";
         }
 
         $url = constant("URL")."producto/mostrarProducto/$idProducto";
