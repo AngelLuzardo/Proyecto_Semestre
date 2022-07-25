@@ -73,7 +73,7 @@
                 <div class="cont_clave">
                     <label for="" class="cont_titulo">Cambio de Contraseña</label>
                     <br/>
-                    <form class="row g-3 form_datos_per" action="cambiarClave.php" method="post">
+                    <form class="row g-3 form_datos_per" action="<?php echo constant("URL"); ?>usuario/cambiarContrasena" method="post">
                         <div class="col-md-12">
                             <label for="txtClaveActual" class="form-label">Contraseña Actual</label>
                             <input type="password" class="form-control" id="txtClaveActual" name="txtClaveActual">
@@ -92,7 +92,7 @@
                 <div class="contDirec">
                     <label for="" class="cont_titulo">Cambio de Dirección</label>
                     <br/>
-                    <form class="row g-3 form_datos_per" action="cambiarDireccion.php" method="post">
+                    <form class="row g-3 form_datos_per" action="<?php echo constant("URL"); ?>usuario/modificarDireccion" method="post">
                         <div class="col-md-6">
                             <select class="form-select region" name="regionSelect" id="regionSelect" aria-labelledby="Default select example">
                                 <!-- <option value="0">Seleccionar Region</option> -->
@@ -130,6 +130,6 @@
 </div>
 
 <script src="<?php echo constant("URL"); ?>js/perfil.js"></script>
-
+<script src="<?php echo constant("URL"); ?>js/header.js"></script>
 <?php include "libs/scriptsJS.php"?>
 <?php require "views/footer.php"?>

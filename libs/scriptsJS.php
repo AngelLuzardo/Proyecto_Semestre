@@ -13,14 +13,14 @@
 if (!isset($_SESSION)) {
     session_start();
 }
-if (isset($_SESSION["mensaje"]) && $_SESSION["mensaje"] != "") {
+if (isset($_SESSION["mensaje"])) {
 
 ?>
     <script>
         Swal.fire({
             position: 'top-end',
             icon: "<?php echo $_SESSION["codigo"] ?>",
-            title: "<?php echo $_SESSION['mensaje'] ?>",
+            title: "<?php echo $_SESSION["mensaje"] ?>",
             showConfirmButton: false,
             timer: 1500
         })

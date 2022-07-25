@@ -178,7 +178,37 @@
             return $listaProductos;
         }
 
+        public function buscarProducto(){
+            $con=new Database();
+            $con->connect();
+            $listaBusqueda = [];
+            if(isset($_GET["buscar"])){
+                $busqueda = $_GET["barra_busqueda"];
+                $sql = "SELECT idproducto,producto.nombre as nombre,descripcion,precio,foto_referencial,cantidad, categoria.nombre as categoria,
+                marca.nombre as marca FROM producto 
+                INNER JOIN marca on marca.idmarca = producto.marca 
+                INNER JOIN categoria on categoria.idcategoria = producto.categoria_id 
+                WHERE producto.tipo LIKE '%$busqueda%' or producto.nombre like '%$busqueda%' ORDER BY precio";
+                $result = $con->conn->query($sql);
+                if($result->num_rows > 0){
+                    while($col = $result->fetch_assoc()){
+                        $item = new ProductoModelo();
         
+                        $item->id_producto = $col["idproducto"];
+                        $item->nombre = $col["nombre"];
+                        $item->precio = $col["precio"];
+                        $item->foto_ref = $col["foto_referencial"];
+                        $item->marca = $col["marca"];
+                        array_push($listaBusqueda,$item);
+                    }
+                }else{
+                    $listaBusqueda=[];
+                }
+            }
+            $con->disconnect();
+            return $listaBusqueda;
+            
+        }
 
     }
 

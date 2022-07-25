@@ -52,6 +52,12 @@ class Producto extends Controller{
         $this->view->productos = $listaProductos;
         $this->view->render("producto/lista");
     }
+
+    function busquedaProducto(){
+        $busquedaProducto = $this->model->buscarProducto();
+        $this->view->busquedaProducto = $busquedaProducto;
+        $this->view->render("busquedaProducto/index");
+    }
 }
 
 

@@ -95,7 +95,7 @@
             $con=new Database();
             $con->connect();
  
-            $query = "DELETE FROM carrito WHERE persona_rut  = $persona_rut  and id_producto = $id_producto"; 
+            $query = "DELETE FROM carrito WHERE persona_rut  = '$persona_rut'  and id_producto = $id_producto"; 
             try{
                 $con->conn->query($query);
             }catch(Exception $e){
@@ -125,7 +125,7 @@
             $con->connect();
 
             try{
-                $query = "DELETE FROM carrito WHERE persona_rut = $rut;"; 
+                $query = "DELETE FROM carrito WHERE persona_rut = '$rut';"; 
                 $con->conn->query($query);
             }catch(Exception){ 
             }
@@ -139,7 +139,7 @@
             $con->connect();
             $id = 0;
             $query = "INSERT INTO boleta (numero_boleta, precio_neto, costo_iva, precio_total, fecha_compra, cliente_persona_rut) 
-            VALUES (null,233,23,432,'2022/10/08','111222')"; 
+            VALUES (null,$precio_total,23,432,'2022/10/08','$rut_cliente')"; 
 
             if ($con->conn->query($query) === TRUE) {
                 $_SESSION["mensaje"] = "Compra procesada";

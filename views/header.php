@@ -35,15 +35,16 @@ if (isset($_SESSION['correo'])) {
                     <img src="<?php echo constant("URL"); ?>public/img/logo.png" alt="" srcset="">
                 </a>
             </div>
-            <div class="header__search">
-                <div class="search">
-                    <input type="text" name="barra_busqueda" class="search__input" placeholder="Buscar productos...">
-                    <button class="search__boton">
-                        <i class="search__icon fa-solid fa-magnifying-glass"></i>
-                    </button>
+            <form class="header__search" action="<?php echo constant("URL");?>producto/busquedaProducto" method="get">
+                <div class="header__search">
+                    <div class="search">
+                        <input type="text" name="barra_busqueda" class="search__input" placeholder="Buscar productos...">
+                        <button class="search__boton" name="buscar">
+                            <i class="search__icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
                 </div>
-
-            </div>
+            </form>
             <div class="header__usuario-carro">
                 <div class="header__usuario">
                     <form id="login" method="post" action="<?php echo constant("URL");?>usuario/validar">
@@ -207,6 +208,21 @@ if (isset($_SESSION['correo'])) {
                 </div>
         </div>
     </form>
+    <div class="nav_cont_cat">
+    <div class="nav_cat">
+        <div class="nav_titulo_cat"><label for="TituloCategoria" class="form-label nav_cat_titulo">HOLA </label><span class="nav_cat_titulo"><?php echo " ".$nombres;?></span></div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Categorias</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php $crud->listarCategorias(); ?>
+            </tbody>
+        </table>
+        </div>
+    </div>
    
     <?php 
     if(!$cuenta){

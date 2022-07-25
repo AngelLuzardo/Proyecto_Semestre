@@ -64,7 +64,7 @@
 
                         <?php
                         foreach ($listaProductos as $item) {
-                            if ($item->precio > 120000) { ?>
+                            if ($item->precio > 120000 && $item->precio < 1200000) { ?>
                                 <div class="producto" id="producto">
                                     <a href="<?php echo constant("URL"); ?>producto/mostrarProducto/<?php echo $item->id_producto; ?>" class="producto__contenedor">
                                         <div class="producto__imagen">

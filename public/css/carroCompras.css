@@ -241,15 +241,14 @@ h3{
     position: relative;
     box-shadow: 0 3px 10px rgb(0 0 0 / 30%);
     width: 1200px;
-    padding: 10px 20px;
     min-height: 600px;
 }
 
 .boleta__container{
     display: flex;
-    margin-bottom: 50px;
     align-items: center;
     flex-direction: column;
+    padding: 30px;
 }
 
 .boleta__detalle{
@@ -297,7 +296,9 @@ h3{
     text-align: center;
     align-items: center;
     font-size: 20px;
-    border: 1px solid var(--morado);
+    background-color: var(--morado);
+    color: #fff;
+    font-weight: bold;
 }
 .boleta__items-container{
     min-height: 400px;

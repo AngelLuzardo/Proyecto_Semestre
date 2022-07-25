@@ -20,6 +20,24 @@
         comuna.html(data);
       });
     });
+
+    var comuna = $("#comunaSelect");
+  
+    $("#comunaSelect").change(function () {
+      var selectRegion = $(this).val();
+      
+      $.ajax({
+        data: {
+          selectRegion: selectRegion
+        },
+        dataType: 'html',
+        type: 'POST',
+        url: "http://localhost/Proyecto_Semestre/usuario/getComunas",
+      }).done(function (data) {
+        comuna.html(data);
+      });
+    });
+  
   
     $(".c1").mouseover(function () {
       $("#c1").fadeIn(200);

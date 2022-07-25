@@ -1,5 +1,8 @@
 <?php
-
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
 class Usuario extends Controller{
     function __construct()
     {
@@ -55,17 +58,28 @@ class Usuario extends Controller{
     public function modificarDireccion(){
         if(isset($_SESSION['correo'])){
             $rut = $_SESSION['rut'];
-            $clave = $_SESSION['clave'];
 
             $calle = $_POST['txtDireccion'];
             $numero = $_POST['txtNumeracion'];
-            $idcomuna = $_POST['comunaSelect'];
+
             
-            $this->model->modificarDireccion($calle,$numero,$idcomuna,$rut);
+            $this->model->modificarDireccion($calle,$numero,$rut);
     
-            $url = constant("URL");
+            $url = constant("URL")."usuario/render";
             header('Location: '.$url);
     
+        }
+    }
+
+    public function cambiarContrasena(){
+        if(isset($_SESSION['correo'])){
+            $rut = $_SESSION['rut'];
+            $clave = $_POST['txtClaveNueva'];
+
+            $this->model->modificarClave($rut,$clave);
+    
+            $url = constant("URL")."usuario/render";
+            header('Location: '.$url);
         }
     }
 
@@ -119,7 +133,6 @@ class Usuario extends Controller{
     }
 
     function modificarUsuario(){
-        session_start(); 
         if(isset($_SESSION['correo'])){
             $rut = $_SESSION['rut']; 
             $nombres = $_POST['txtNombre'];

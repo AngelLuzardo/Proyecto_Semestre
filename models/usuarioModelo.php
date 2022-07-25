@@ -148,9 +148,11 @@
                 $sql = "UPDATE persona SET nombres='$nombres', ape_paterno='$apellidop',ape_materno='$apellidom',estado='$estado',tipo_usuario_idtipo_usuario='$idTipo'
                 WHERE rut = '$rut'";
                 if($con->conn->query($sql) === TRUE){
-                    echo "Actualizado correctamente";
+                    $_SESSION["mensaje"] = "Actualizado correctamente";
+                    $_SESSION["codigo"] = "success";
                 } else {
-                    echo "No puede actualizar";
+                    $_SESSION["mensaje"] = "No se pudo actualizar";
+                    $_SESSION["codigo"] = "error";
                 }
                 $con->disconnect();
             }            
@@ -158,30 +160,29 @@
     
         function modificarClave($rut,$clave){
             $con=new Database();
-            if(isset($_POST['btnGuardarDatos'])){
                 $con->connect();
-                $sql = "UPDATE contraseña SET clave='$clave' WHERE Persona_rut='$rut'";
+                $sql = "UPDATE contrasena SET clave='$clave' WHERE Persona_rut='$rut'";
                 if($con->conn->query($sql) === TRUE){
                     echo "Actualizado correctamente";
                 } else {
                     echo "No puede actualizar";
                 }
                 $con->disconnect();
-            }
+
         }
     
-        function modificarDireccion($calle,$numero,$idcomuna,$rut){
+        function modificarDireccion($calle,$numero,$rut){
             $con=new Database();
-            if(isset($_POST['btnGuardarDatos'])){
+            
                 $con->connect();
-                $sql = "UPDATE direccion set calle='$calle',numeracion='$numero',comuna_cod_comuna='$idcomuna' WHERE persona_rut='$rut'";
+                $sql = "UPDATE direccion set calle='$calle',numero='$numero' WHERE persona_rut='$rut'";
                 if($con->conn->query($sql) === TRUE){
                     echo "Actualizado correctamente";
                 } else {
                     echo "No puede actualizar";
                 }
                 $con->disconnect();
-            }
+            
         }
         function listarCategorias(){
             $con=new Database();
@@ -192,7 +193,7 @@
                 while($row = $result->fetch_assoc()) {
                     
                     echo "<tr>
-                            <td><a class='btn btn_categoria' href='#' role='button'>".$row["nombre"]."</a></td>  
+                            <td><a class='btn btn_categoria' href='".constant('URL')."producto/categoria/".$row["nombre"]."' role='button'>".$row["nombre"]."</a></td>  
                           </tr>";            
                 }
             } else {
